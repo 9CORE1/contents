@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지·영상장비 종류 - AI 영상 마케팅 실무</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
+                <div class="logo-text">
+                    <h1>AI 영상 마케팅 실무</h1>
+                    <span class="subtitle">미래내일일경험 사전직무교육 광고마케팅</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <!-- Progress Tracking -->
+                <div class="progress-container">
+                    <span class="progress-label">나의 학습 진도율</span>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressText">0%</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="테마 변경">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="app-sidebar" id="appSidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-item">
+                                <span class="step-num">1</span>
+                                <div class="item-details">
+                                    <span class="item-title">저작권 & 콘텐츠 이해</span>
+                                    <span class="item-sub">유튜브 및 AI 저작권 핵심</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture2.html" class="nav-item active">
+                                <span class="step-num">2</span>
+                                <div class="item-details">
+                                    <span class="item-title">이미지·영상장비 종류</span>
+                                    <span class="item-sub">장비 특성 및 조명 설정</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture3.html" class="nav-item">
+                                <span class="step-num">3</span>
+                                <div class="item-details">
+                                    <span class="item-title">편집 프로그램 비교</span>
+                                    <span class="item-sub">종류별 특징 및 장단점</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture4.html" class="nav-item">
+                                <span class="step-num">4</span>
+                                <div class="item-details">
+                                    <span class="item-title">스토리보드 작성법</span>
+                                    <span class="item-sub">스토리보드 양식 미리보기</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture5.html" class="nav-item">
+                                <span class="step-num">5</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 이미지 제작</span>
+                                    <span class="item-sub">Gemini/ChatGPT 활용</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture6.html" class="nav-item">
+                                <span class="step-num">6</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 영상 제작</span>
+                                    <span class="item-sub">higgsfield 및 AI 비디오</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture7.html" class="nav-item">
+                                <span class="step-num">7</span>
+                                <div class="item-details">
+                                    <span class="item-title">Capcut으로 영상 완성</span>
+                                    <span class="item-sub">컷편집, 자동자막 및 완성</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="7">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Panels -->
+            <main class="app-main">
+                <!-- Content Swiper Tab Bar -->
+                <div class="content-swiper-bar mb-6">
+                    <button class="swiper-btn active" data-target-step="1">
+                        <i class="fa-solid fa-camera swiper-icon"></i>
+                        <span>촬영/음향 장비 종류</span>
+                    </button>
+                    <button class="swiper-btn" data-target-step="2">
+                        <i class="fa-solid fa-lightbulb swiper-icon"></i>
+                        <span>실전 3점 조명 가이드</span>
+                    </button>
+                    <div class="swiper-active-bg"></div>
+                </div>
+
+                <div class="sub-step-slider-container">
+                    
+                    <!-- Sub Step 1: 촬영 및 녹화 장비 종류 -->
+                    <div class="sub-step active" id="sub-step-1">
+                        <div class="panel-header">
+                            <h2>2. 이미지·영상장비의 종류와 특징</h2>
+                            <p class="panel-desc">촬영 목적과 마케팅 예산에 최적화된 하드웨어 촬영, 조명, 수음 장비들을 비교 분석합니다.</p>
+                        </div>
+                        <div class="grid-layout cols-3">
+                            <!-- Camera Card -->
+                            <div class="content-card glass">
+                                <div class="card-badge"><i class="fa-solid fa-camera"></i> 촬영 장비</div>
+                                <h3>카메라 및 녹화 장비</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list-sm">
+                                        <li><strong>스마트폰:</strong> 뛰어난 휴대성과 자동 보정 기능, 숏폼 콘텐츠에 최적.</li>
+                                        <li><strong>미러리스:</strong> 대형 센서로 고화질 구현 및 아웃포커싱, 브랜딩 영상용.</li>
+                                        <li><strong>웹캠/액션캠:</strong> 라이브 방송이나 실외 역동적 활동 촬영에 특화.</li>
+                                    </ul>
+                                    <div class="tool-gallery">
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/phone.png" data-title="실전 촬영 장비 - 고해상도 스마트폰(Phone)">
+                                            <img src="result/tools/phone.png" alt="스마트폰">
+                                            <span class="tool-tag">스마트폰</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/mirrorless_camera.jpg" data-title="실전 촬영 장비 - 전문가용 미러리스 카메라(Mirrorless)">
+                                            <img src="result/tools/mirrorless_camera.jpg" alt="미러리스">
+                                            <span class="tool-tag">미러리스</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/camera.png" data-title="실전 촬영 장비 - 컴팩트 DSLR 카메라(Camera)">
+                                            <img src="result/tools/camera.png" alt="DSLR 카메라">
+                                            <span class="tool-tag">DSLR</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/actioncam.jpg" data-title="실전 촬영 장비 - 야외 역동성 촬영 액션캠(ActionCam)">
+                                            <img src="result/tools/actioncam.jpg" alt="액션캠">
+                                            <span class="tool-tag">액션캠</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/handicam.jpg" data-title="실전 촬영 장비 - 핸디형 캠코더(HandiCam)">
+                                            <img src="result/tools/handicam.jpg" alt="핸디캠">
+                                            <span class="tool-tag">핸디캠</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/webcam.jpg" data-title="실전 촬영 장비 - 1인 라이브 방송용 웹캠(Webcam)">
+                                            <img src="result/tools/webcam.jpg" alt="웹캠">
+                                            <span class="tool-tag">웹캠</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/gimbal.png" data-title="실전 촬영 장비 - 흔들림 방지 짐벌(Gimbal)">
+                                            <img src="result/tools/gimbal.png" alt="짐벌">
+                                            <span class="tool-tag">짐벌</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/tripod.jpg" data-title="촬영 보조 장비 - 흔들림 지지형 삼각대(Tripod)">
+                                            <img src="result/tools/tripod.jpg" alt="삼각대">
+                                            <span class="tool-tag">삼각대</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lighting Card -->
+                            <div class="content-card glass">
+                                <div class="card-badge"><i class="fa-solid fa-lightbulb"></i> 조명 장비</div>
+                                <h3>지속광 및 보조 조명</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list-sm">
+                                        <li><strong>LED 패널 라이트:</strong> 광량이 일정하고 색온도 조절이 쉬워 실내 기본 탑재.</li>
+                                        <li><strong>소프트박스:</strong> 빛을 부드럽게 퍼뜨려 인물 피부 톤을 깨끗하게 연출.</li>
+                                        <li><strong>링라이트:</strong> 인물 뷰티, 리뷰 영상에서 눈동자 캐치라이트 생성 및 섀도우 제거.</li>
+                                    </ul>
+                                    <div class="tool-gallery">
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/light.png" data-title="실전 조명 장비 - LED 지속광 패널 라이트(LED Light)">
+                                            <img src="result/tools/light.png" alt="지속광">
+                                            <span class="tool-tag">지속광 LED</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/reflector.png" data-title="스튜디오 조명 장비 - 빛 반사판(Reflector) 보조판">
+                                            <img src="result/tools/reflector.png" alt="반사판">
+                                            <span class="tool-tag">빛 반사판</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/chromakey.png" data-title="스튜디오 조명 보조 - 배경 제거용 크로마키(Chromakey) 스크린">
+                                            <img src="result/tools/chromakey.png" alt="크로마키">
+                                            <span class="tool-tag">크로마키</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Audio Card -->
+                            <div class="content-card glass">
+                                <div class="card-badge"><i class="fa-solid fa-microphone"></i> 음향 장비</div>
+                                <h3>마이크 및 수음 장비</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list-sm">
+                                        <li><strong>핀마이크 (Lavalier):</strong> 1인 토크 및 인터뷰 시 목소리를 또렷하게 수음.</li>
+                                        <li><strong>샷건 마이크 (Shotgun):</strong> 특정 방향의 소리를 지향 수집, 카메라 장착용.</li>
+                                        <li><strong>콘덴서 마이크:</strong> 실내 내레이션/더빙, ASMR 등 스튜디오 녹음에 탁월.</li>
+                                    </ul>
+                                    <div class="tool-gallery">
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/condenser mic.png" data-title="실전 음향 장비 - 고해상도 콘덴서 마이크(Condenser Mic)">
+                                            <img src="result/tools/condenser mic.png" alt="콘덴서 마이크">
+                                            <span class="tool-tag">콘덴서 마이크</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/pin_mic.png" data-title="실전 음향 장비 - 밀착형 핀 마이크(Pin Mic)">
+                                            <img src="result/tools/pin_mic.png" alt="핀 마이크">
+                                            <span class="tool-tag">핀 마이크</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/voicerecoder.png" data-title="실전 음향 장비 - 휴대용 보이스 레코더(Voice Recorder)">
+                                            <img src="result/tools/voicerecoder.png" alt="보이스 레코더">
+                                            <span class="tool-tag">녹음기</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/Audio_Interface.png" data-title="스튜디오 음향 장비 - 오디오 인터페이스(Audio Interface)">
+                                            <img src="result/tools/Audio_Interface.png" alt="오디오 인터페이스">
+                                            <span class="tool-tag">오인페</span>
+                                        </div>
+                                        <div class="tool-gallery-item gallery-item" data-src="result/tools/shock mount.png" data-title="스튜디오 음향 장비 - 진동 제어 쇼크 마운트(Shock Mount)">
+                                            <img src="result/tools/shock mount.png" alt="쇼크 마운트">
+                                            <span class="tool-tag">쇼크 마운트</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: 3점 조명 설정법 -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>2. 이미지·영상장비의 종류와 특징</h2>
+                            <p class="panel-desc">영상 화질의 90%는 조명이 결정합니다. 스튜디오 기본 배치인 3점 조명 규칙을 학습합니다.</p>
+                        </div>
+                        <div class="content-card glass">
+                            <h3><i class="fa-solid fa-lightbulb text-accent-gold card-icon"></i> 3점 조명 설정법 (Three-Point Lighting Guide)</h3>
+                            <div class="card-body lighting-guide">
+                                <div class="lighting-visual">
+                                    
+                                    <!-- Key Light Item -->
+                                    <div class="lighting-setup-item vertical-card">
+                                        <div class="light-content">
+                                            <h4>1. 주광 (Key Light)</h4>
+                                            <p>피사체의 사선 45도 앞쪽에 배치하여 주 광원을 확보합니다. 피사체의 전체적인 형태와 성격을 결정합니다.</p>
+                                        </div>
+                                        <div class="light-img-wrapper gallery-item" data-src="result/light_key.png" data-title="주광 (Key Light) - 스튜디오 기본 핵심 주광원 배치">
+                                            <img src="result/light_key.png" alt="주광 설명 이미지" class="light-img">
+                                            <div class="img-overlay">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Fill Light Item -->
+                                    <div class="lighting-setup-item vertical-card">
+                                        <div class="light-content">
+                                            <h4>2. 보조광 (Fill Light)</h4>
+                                            <p>주광의 반대편 45도에 배치하며, 주광보다 50% 약하게 설정하여 생긴 짙은 그림자를 부드럽게 메워줍니다.</p>
+                                        </div>
+                                        <div class="light-img-wrapper gallery-item" data-src="result/light_fill.png" data-title="보조광 (Fill Light) - 부드러운 그림자 완화 보조광원 배치">
+                                            <img src="result/light_fill.png" alt="보조광 설명 이미지" class="light-img">
+                                            <div class="img-overlay">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Back Light Item -->
+                                    <div class="lighting-setup-item vertical-card">
+                                        <div class="light-content">
+                                            <h4>3. 역광 (Back Light / Hair Light)</h4>
+                                            <p>피사체의 뒤쪽 높은 곳에 배치하여 피사체와 배경을 분리시켜 3차원적인 입체감을 극대화합니다.</p>
+                                        </div>
+                                        <div class="light-img-wrapper gallery-item" data-src="result/light_back.png" data-title="역광 (Back Light / Hair Light) - 3차원 입체감 배경분리 광원 배치">
+                                            <img src="result/light_back.png" alt="역광 설명 이미지" class="light-img">
+                                            <div class="img-overlay">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <!-- Toolbar -->
+            <div class="lightbox-toolbar">
+                <span class="caption" id="lightboxCaption">이미지 뷰어</span>
+                <div class="toolbar-right">
+                    <button class="tool-btn" id="zoomInBtn" title="확대"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="tool-btn" id="zoomOutBtn" title="축소"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="tool-btn" id="zoomResetBtn" title="초기화"><i class="fa-solid fa-compress"></i></button>
+                    <button class="close-btn" id="lightboxCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <!-- Image Area -->
+            <div class="lightbox-image-container">
+                <button class="nav-btn prev" id="lightboxPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <img src="" alt="확대 이미지" id="lightboxImg">
+                <button class="nav-btn next" id="lightboxNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

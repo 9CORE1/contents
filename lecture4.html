@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스토리보드 작성법 - AI 영상 마케팅 실무</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
+                <div class="logo-text">
+                    <h1>AI 영상 마케팅 실무</h1>
+                    <span class="subtitle">미래내일일경험 사전직무교육 광고마케팅</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <!-- Progress Tracking -->
+                <div class="progress-container">
+                    <span class="progress-label">나의 학습 진도율</span>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressText">0%</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="테마 변경">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="app-sidebar" id="appSidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-item">
+                                <span class="step-num">1</span>
+                                <div class="item-details">
+                                    <span class="item-title">저작권 & 콘텐츠 이해</span>
+                                    <span class="item-sub">유튜브 및 AI 저작권 핵심</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture2.html" class="nav-item">
+                                <span class="step-num">2</span>
+                                <div class="item-details">
+                                    <span class="item-title">이미지·영상장비 종류</span>
+                                    <span class="item-sub">장비 특성 및 조명 설정</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture3.html" class="nav-item">
+                                <span class="step-num">3</span>
+                                <div class="item-details">
+                                    <span class="item-title">편집 프로그램 비교</span>
+                                    <span class="item-sub">종류별 특징 및 장단점</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture4.html" class="nav-item active">
+                                <span class="step-num">4</span>
+                                <div class="item-details">
+                                    <span class="item-title">스토리보드 작성법</span>
+                                    <span class="item-sub">스토리보드 양식 미리보기</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture5.html" class="nav-item">
+                                <span class="step-num">5</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 이미지 제작</span>
+                                    <span class="item-sub">Gemini/ChatGPT 활용</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture6.html" class="nav-item">
+                                <span class="step-num">6</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 영상 제작</span>
+                                    <span class="item-sub">higgsfield 및 AI 비디오</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture7.html" class="nav-item">
+                                <span class="step-num">7</span>
+                                <div class="item-details">
+                                    <span class="item-title">Capcut으로 영상 완성</span>
+                                    <span class="item-sub">컷편집, 자동자막 및 완성</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="7">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Panels -->
+            <main class="app-main">
+                <!-- Content Swiper Tab Bar -->
+                <div class="content-swiper-bar mb-6">
+                    <button class="swiper-btn active" data-target-step="1">
+                        <i class="fa-solid fa-list-check swiper-icon"></i>
+                        <span>스토리보드 작성 요소</span>
+                    </button>
+                    <button class="swiper-btn" data-target-step="2">
+                        <i class="fa-solid fa-file-invoice swiper-icon"></i>
+                        <span>추천 사이트 & 미리보기</span>
+                    </button>
+                    <div class="swiper-active-bg"></div>
+                </div>
+
+                <div class="sub-step-slider-container">
+
+                    <!-- Sub Step 1: 작성 필수 요소 -->
+                    <div class="sub-step active" id="sub-step-1">
+                        <div class="panel-header">
+                            <h2>4. 스토리보드 작성 방법</h2>
+                            <p class="panel-desc">아이디어를 영상으로 시각화하고 협업을 효율화하는스토리보드(콘티)의 필수 구성 요소입니다.</p>
+                        </div>
+                        <div class="storyboard-factors-layout">
+                            <!-- Left: Written Factors Card -->
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-indent text-accent-purple card-icon"></i> 스토리보드 작성 시 필수 4대 구성
+                                    요소</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list" style="margin-bottom: 0;">
+                                        <li><strong>Scene No. & Cut No. (장면 및 컷 번호):</strong> 영상 편집 순서를 정하는 기본 식별 코드입니다.
+                                        </li>
+                                        <li><strong>Visual Sketch (비주얼 스케치):</strong> 해당 컷에 보여질 대략적인 구도, 인물 배치 및 시각 연출을
+                                            그림이나 텍스트로 묘사합니다.</li>
+                                        <li><strong>Audio & Dialogue (오디오 및 대사/내레이션):</strong> BGM 사운드 종류, 자막에 들어갈 텍스트
+                                            내용을 정의합니다.</li>
+                                        <li><strong>Action & Camera Motion (동작 및 연출):</strong> 피사체의 행동 방향, 카메라 무빙, 전환
+                                            시간(Duration)을 명시합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Right: Storyboard Image Preview Card -->
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-image text-accent-purple card-icon"></i> 스토리보드 작성 실제 가이드 예시
+                                </h3>
+                                <div class="card-body"
+                                    style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 220px; height: 100%;">
+                                    <div class="image-zoom-container gallery-item" data-src="result/storyboard.jpg"
+                                        data-title="스토리보드 작성 실제 가이드 예시">
+                                        <img src="result/storyboard.jpg" alt="스토리보드 예시"
+                                            style="max-height: 220px; width: 100%; object-fit: contain; border-radius: 12px; border: 1px solid var(--border-color); cursor: pointer;">
+                                        <div class="zoom-overlay">
+                                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            <span>클릭하여 크게 보기</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: 추천 사이트 및 양식 미리보기 -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>4. 스토리보드 작성 방법</h2>
+                            <p class="panel-desc">스토리보드 제작을 도와주는 도구 리스트와 실무형 간이 콘티 양식 미리보기입니다.</p>
+                        </div>
+                        <div class="storyboard-split-layout">
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-link text-accent-blue card-icon"></i> 스토리보드 추천 도구 및 링크</h3>
+                                <div class="card-body">
+                                    <div class="link-buttons">
+                                        <a href="https://www.canva.com/ko_kr/create/storyboards/" target="_blank"
+                                            class="btn btn-outline">
+                                            <i class="fa-solid fa-palette"></i> 캔바(Canva) 스토리보드 템플릿 바로가기
+                                        </a>
+                                        <a href="https://storyboarder.wonderunit.com/" target="_blank"
+                                            class="btn btn-outline">
+                                            <i class="fa-solid fa-pencil"></i> 스토리보더(Storyboarder) 다운로드
+                                        </a>
+                                    </div>
+                                    <!-- 캐릭터 연출 가이드 예시 이미지 추가 -->
+                                    <div class="image-zoom-container gallery-item mt-4"
+                                        data-src="result/storyboard_cha.png" data-title="스토리보드 캐릭터 연출 스케치 예시">
+                                        <img src="result/storyboard_cha.png" alt="캐릭터 연출 예시"
+                                            style="max-height: 110px; width: 100%; object-fit: contain; border-radius: 10px; border: 1px solid var(--border-color); cursor: pointer; background: rgba(255, 255, 255, 0.02);">
+                                        <div class="zoom-overlay">
+                                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            <span>클릭하여 크게 보기</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-eye text-accent-purple card-icon"></i> 스토리보드 양식 미리보기</h3>
+                                <div class="card-body">
+                                    <div class="comparison-table-wrapper">
+                                        <table class="comparison-table text-xs">
+                                            <thead>
+                                                <tr>
+                                                    <th>씬 번호</th>
+                                                    <th>화면 연출 (Visual)</th>
+                                                    <th>자막 & 사운드 (Audio)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#01</td>
+                                                    <td>브랜드 로고가 중앙에 부드럽게 나타남</td>
+                                                    <td>웅장한 BGM 서서히 인트로</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#02</td>
+                                                    <td>인물이 스마트폰 화면을 두드리는 타이트 샷</td>
+                                                    <td>(내레이션) "아직도 복잡하게 편집하시나요?"</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#03</td>
+                                                    <td>CapCut의 다양한 기능들이 지나감 (고속 재생)</td>
+                                                    <td>(자막) AI 자막 생성! 3초면 끝!</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 실무 팁을 추가하여 하단 빈 공간 가독성 확보 -->
+                                    <p class="table-tip"
+                                        style="margin-top: 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; text-align: left; background: rgba(255, 255, 255, 0.02); padding: 12px 16px; border-radius: 8px; border-left: 3px solid var(--accent-purple);">
+                                        <i class="fa-solid fa-circle-info text-accent-purple"
+                                            style="margin-right: 6px;"></i>
+                                        <strong>작성 팁:</strong> 마케팅 숏폼(15초~60초)은 보통 5개~10개의 씬으로 구성됩니다. 각 씬의 화면 전환
+                                        시간(Duration)은 3초 내외가 시청 지속시간 확보에 가장 좋습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Lightbox Zoom Modal for Images -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-content" id="lightboxImg">
+        </div>
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

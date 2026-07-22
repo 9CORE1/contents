@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편집 프로그램 비교 - AI 영상 마케팅 실무</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
+                <div class="logo-text">
+                    <h1>AI 영상 마케팅 실무</h1>
+                    <span class="subtitle">미래내일일경험 사전직무교육 광고마케팅</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <!-- Progress Tracking -->
+                <div class="progress-container">
+                    <span class="progress-label">나의 학습 진도율</span>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressText">0%</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="테마 변경">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="app-sidebar" id="appSidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-item">
+                                <span class="step-num">1</span>
+                                <div class="item-details">
+                                    <span class="item-title">저작권 & 콘텐츠 이해</span>
+                                    <span class="item-sub">유튜브 및 AI 저작권 핵심</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture2.html" class="nav-item">
+                                <span class="step-num">2</span>
+                                <div class="item-details">
+                                    <span class="item-title">이미지·영상장비 종류</span>
+                                    <span class="item-sub">장비 특성 및 조명 설정</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture3.html" class="nav-item active">
+                                <span class="step-num">3</span>
+                                <div class="item-details">
+                                    <span class="item-title">편집 프로그램 비교</span>
+                                    <span class="item-sub">종류별 특징 및 장단점</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture4.html" class="nav-item">
+                                <span class="step-num">4</span>
+                                <div class="item-details">
+                                    <span class="item-title">스토리보드 작성법</span>
+                                    <span class="item-sub">스토리보드 양식 미리보기</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture5.html" class="nav-item">
+                                <span class="step-num">5</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 이미지 제작</span>
+                                    <span class="item-sub">Gemini/ChatGPT 활용</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture6.html" class="nav-item">
+                                <span class="step-num">6</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 영상 제작</span>
+                                    <span class="item-sub">higgsfield 및 AI 비디오</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture7.html" class="nav-item">
+                                <span class="step-num">7</span>
+                                <div class="item-details">
+                                    <span class="item-title">Capcut으로 영상 완성</span>
+                                    <span class="item-sub">컷편집, 자동자막 및 완성</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="7">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Panels -->
+            <main class="app-main">
+                <!-- Content Swiper Tab Bar -->
+                <div class="content-swiper-bar mb-6">
+                    <button class="swiper-btn active" data-target-step="1">
+                        <i class="fa-solid fa-bolt swiper-icon"></i>
+                        <span>CapCut & Vrew 편의 기능</span>
+                    </button>
+                    <button class="swiper-btn" data-target-step="2">
+                        <i class="fa-solid fa-code-compare swiper-icon"></i>
+                        <span>전문가용 툴 비교</span>
+                    </button>
+                    <div class="swiper-active-bg"></div>
+                </div>
+
+                <div class="sub-step-slider-container">
+                    
+                    <!-- Sub Step 1: CapCut & Vrew 소개 -->
+                    <div class="sub-step active" id="sub-step-1">
+                        <div class="panel-header">
+                            <h2>3. 편집 프로그램의 종류와 특징</h2>
+                            <p class="panel-desc">초보자부터 1인 크리에이터까지 숏폼, 롱폼 영상을 신속하게 연출할 수 있는 CapCut과 Vrew의 강력한 AI 편의 기능입니다.</p>
+                        </div>
+                        <div class="grid-layout cols-2">
+                            <!-- CapCut Card -->
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-circle-check text-accent-purple card-icon"></i> CapCut - 마케팅 편집 최강 툴</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list-sm">
+                                        <li><strong>기본 제공 리소스의 풍부함:</strong> 저작권 걱정 없는 BGM, 화면 전환 효과(Transition), 다양한 템플릿, 스티커 등이 기본 제공되어 고효율 제작이 가능합니다.</li>
+                                        <li><strong>AI 자동 자막(Speech-to-Text):</strong> 한국어 및 외국어 오디오 음성을 98% 정확도로 빠르게 자동 추출하여 예쁜 자막 레이아웃으로 입혀줍니다.</li>
+                                        <li><strong>AI 배경 제거 및 트래킹:</strong> 복잡한 크로마키 세팅 없이도 인물 배경을 원클릭으로 없애고 피사체 동작을 자동으로 추적해 스티커 등을 부착해줍니다.</li>
+                                    </ul>
+                                    <div class="card-action-area">
+                                        <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                            <i class="fa-solid fa-download"></i> CapCut 공식 사이트 바로가기
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Vrew Card -->
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-circle-check text-accent-blue card-icon"></i> Vrew - AI 기반 텍스트 편집 툴</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list-sm">
+                                        <li><strong>텍스트 기반 문서식 편집:</strong> 워드나 아래한글 문서를 편집하듯 영상 속 음성을 텍스트로 보며 지우거나 옮기는 혁신적인 컷편집 방식입니다.</li>
+                                        <li><strong>AI 목소리 및 대본 자동 생성:</strong> 텍스트 대본만 입력하면 자연스러운 AI 보이스(TTS)로 내레이션을 즉시 만들고 그에 어울리는 이미지/비디오를 자동 매핑합니다.</li>
+                                        <li><strong>빠른 자동 자막 추출:</strong> 음성 분석을 통해 자막 싱크를 완벽히 맞추고 번역 자막까지 원클릭으로 생성하여 숏폼 마케팅 효율을 대폭 올립니다.</li>
+                                    </ul>
+                                    <div class="card-action-area">
+                                        <a href="https://vrew.voyagerx.com/ko/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                            <i class="fa-solid fa-square-arrow-up-right"></i> Vrew 공식 사이트 바로가기
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: 전문가용 툴 비교 테이블 -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>3. 편집 프로그램의 종류와 특징</h2>
+                            <p class="panel-desc">비디오 마케터로서 편집 범위와 예산 요구치에 적합한 영상 편집 프로그램 비교 가이드입니다.</p>
+                        </div>
+                        <div class="content-card glass">
+                            <h3><i class="fa-solid fa-table card-icon text-accent-blue"></i> 주요 영상 편집 프로그램 스펙 분석</h3>
+                            <div class="card-body">
+                                <div class="comparison-table-wrapper">
+                                    <table class="comparison-table">
+                                        <thead>
+                                            <tr>
+                                                <th>프로그램명</th>
+                                                <th>특장점</th>
+                                                <th>단점</th>
+                                                <th>권장 사양</th>
+                                                <th>타겟 추천</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="prog-name">
+                                                    <img src="result/logo_capcut.png" alt="CapCut 로고" class="prog-logo">
+                                                    <span>CapCut</span>
+                                                </td>
+                                                <td>자동자막, 템플릿, 모바일 연동 및 사용성 최상</td>
+                                                <td>정밀 오디오 싱크 및 3D 그래픽 보정 한계, 프로 기능 결제 유도</td>
+                                                <td>FHD 편집: 중간급 사양</td>
+                                                <td>마케터, 소상공인, 초보자</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="prog-name">
+                                                    <img src="result/logo_vrew.png" alt="Vrew 로고" class="prog-logo">
+                                                    <span>Vrew</span>
+                                                </td>
+                                                <td>텍스트 문서 편집 방식 컷편집, AI 목소리 생성 및 고속 자동 자막</td>
+                                                <td>멀티트랙 레이어 부재, 섬세한 효과음 및 프레임별 화면 전환 불가</td>
+                                                <td>웹/가벼운 설치형: 저사양 PC 가능</td>
+                                                <td>빠른 쇼츠 제작자, 대본 위주 영상 편집 마케터</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="prog-name">
+                                                    <img src="result/logo_premiere.png" alt="Premiere Pro 로고" class="prog-logo">
+                                                    <span>Premiere Pro</span>
+                                                </td>
+                                                <td>업계 표준, 풍부한 연동성, 고차원 자막 템플릿</td>
+                                                <td>비싼 구독료(월정액), 잦은 버그 및 크래시, 고사양 PC 사양 요구</td>
+                                                <td>4K 편집: 16G RAM / 그래픽카드 필수</td>
+                                                <td>전문 편집자, 대행사</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="prog-name">
+                                                    <img src="result/logo_davinci.png" alt="DaVinci Resolve 로고" class="prog-logo">
+                                                    <span>DaVinci Resolve</span>
+                                                </td>
+                                                <td>프로급 색보정, 강력한 오디오 믹싱, 무료 라이선스</td>
+                                                <td>노드(Node) 방식 이펙트 적용의 높은 진입장벽, 무겁고 복잡한 사용법</td>
+                                                <td>GPU 리소스 요구 수준 매우 높음</td>
+                                                <td>컬러리스트, 고품질 시네마틱</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

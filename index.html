@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>저작권 & 콘텐츠 이해 - AI 영상 마케팅 실무</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
+                <div class="logo-text">
+                    <h1>AI 영상 마케팅 실무</h1>
+                    <span class="subtitle">미래내일일경험 사전직무교육 광고마케팅</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <!-- Progress Tracking -->
+                <div class="progress-container">
+                    <span class="progress-label">나의 학습 진도율</span>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressText">0%</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="테마 변경">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="app-sidebar" id="appSidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-item active">
+                                <span class="step-num">1</span>
+                                <div class="item-details">
+                                    <span class="item-title">저작권 & 콘텐츠 이해</span>
+                                    <span class="item-sub">유튜브 및 AI 저작권 핵심</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture2.html" class="nav-item">
+                                <span class="step-num">2</span>
+                                <div class="item-details">
+                                    <span class="item-title">이미지·영상장비 종류</span>
+                                    <span class="item-sub">장비 특성 및 조명 설정</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture3.html" class="nav-item">
+                                <span class="step-num">3</span>
+                                <div class="item-details">
+                                    <span class="item-title">편집 프로그램 비교</span>
+                                    <span class="item-sub">종류별 특징 및 장단점</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture4.html" class="nav-item">
+                                <span class="step-num">4</span>
+                                <div class="item-details">
+                                    <span class="item-title">스토리보드 작성법</span>
+                                    <span class="item-sub">스토리보드 양식 미리보기</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture5.html" class="nav-item">
+                                <span class="step-num">5</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 이미지 제작</span>
+                                    <span class="item-sub">Gemini/ChatGPT 활용</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture6.html" class="nav-item">
+                                <span class="step-num">6</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 영상 제작</span>
+                                    <span class="item-sub">higgsfield 및 AI 비디오</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture7.html" class="nav-item">
+                                <span class="step-num">7</span>
+                                <div class="item-details">
+                                    <span class="item-title">Capcut으로 영상 완성</span>
+                                    <span class="item-sub">컷편집, 자동자막 및 완성</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="7">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Panels -->
+            <main class="app-main">
+                <!-- Content Swiper Tab Bar -->
+                <div class="content-swiper-bar mb-6">
+                    <button class="swiper-btn active" data-target-step="1">
+                        <i class="fa-solid fa-scale-balanced swiper-icon"></i>
+                        <span>유튜브 & AI 저작권 가이드</span>
+                    </button>
+                    <button class="swiper-btn" data-target-step="2">
+                        <i class="fa-solid fa-circle-info swiper-icon"></i>
+                        <span>필수 기술 용어 이해</span>
+                    </button>
+                    <div class="swiper-active-bg"></div>
+                </div>
+
+                <!-- Section 1: 저작권과 이미지·영상콘텐츠의 이해 (내부 서브 스텝 슬라이더 구현) -->
+                <div class="sub-step-slider-container">
+                    
+                    <!-- Sub Step 1: 저작권 핵심 가이드 -->
+                    <div class="sub-step active" id="sub-step-1">
+                        <div class="panel-header">
+                            <h2>1. 저작권과 이미지·영상콘텐츠의 이해</h2>
+                            <p class="panel-desc">성공적인 마케팅을 위한 첫걸음, 안전한 저작권 활용과 디지털 콘텐츠의 기초 개념을 학습합니다.</p>
+                        </div>
+                        <div class="grid-layout cols-1">
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-scale-balanced card-icon text-accent-purple"></i> 유튜브 및 AI 영상 저작권 핵심 가이드</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list">
+                                        <li><strong>생성형 AI 산출물의 저작권성:</strong> 현재 법률상 인간의 창작적 기여가 없는 순수 AI 저작물은 저작권 등록이 제한될 수 있습니다.</li>
+                                        <li><strong>프롬프트와 가공의 중요성:</strong> 인간이 세부 프롬프트를 설계하고, 2차 편집 및 보정 작업을 거친 경우 창작성을 인정받을 가능성이 높습니다.</li>
+                                        <li><strong>상업적 이용 범위 확인:</strong> 사용하는 생성형 AI 서비스(Gemini, ChatGPT, Midjourney 등)의 요금제별 상업 라이선스 규정을 필히 준수해야 합니다.</li>
+                                        <li><strong>초상권 및 상표권 침해 주의:</strong> 실존 인물이나 등록 상표가 포함된 이미지를 상업 마케팅 영상에 동의 없이 활용하는 것을 금지합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: 콘텐츠 제작 필수 기술 용어 (이미지 클릭 시 크게 보기 적용) -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>1. 저작권과 이미지·영상콘텐츠의 이해</h2>
+                            <p class="panel-desc">성공적인 마케팅을 위한 첫걸음, 안전한 저작권 활용과 디지털 콘텐츠의 기초 개념을 학습합니다.</p>
+                        </div>
+                        <div class="grid-layout cols-1">
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-circle-info card-icon text-accent-blue"></i> 콘텐츠 제작 필수 기술 용어</h3>
+                                <div class="card-body">
+                                    <div class="term-grid">
+                                        
+                                        <!-- Term 1: 해상도 -->
+                                        <div class="term-item">
+                                            <div class="term-img-wrapper gallery-item" data-src="result/term_resolution.png" data-title="해상도 (Resolution) 구조도 - FHD 대 4K 영역 비교">
+                                                <img src="result/term_resolution.png" alt="해상도 설명 이미지" class="term-img">
+                                                <div class="img-overlay">
+                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="term-content">
+                                                <span class="term-title">해상도 (Resolution)</span>
+                                                <p class="term-desc">이미지나 영상을 구성하는 픽셀 수. FHD(1920x1080), 4K UHD(3840x2160) 등 목적에 맞게 설정합니다.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Term 2: fps -->
+                                        <div class="term-item">
+                                            <div class="term-img-wrapper gallery-item" data-src="result/term_fps.png" data-title="fps (Frames Per Second) 프레임 레이트 시퀀스 비교">
+                                                <img src="result/term_fps.png" alt="FPS 설명 이미지" class="term-img">
+                                                <div class="img-overlay">
+                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="term-content">
+                                                <span class="term-title">fps (Frames Per Second)</span>
+                                                <p class="term-desc">초당 프레임 수. 영화(24fps), 방송/일반 유튜브(30fps), 스포츠/액션(60fps) 등에 주로 쓰입니다.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Term 3: 파일 형식 -->
+                                        <div class="term-item">
+                                            <div class="term-img-wrapper gallery-item" data-src="result/term_format.png" data-title="멀티미디어 콘텐츠 표준 파일 형식 (PNG, JPG, MP4, MOV)">
+                                                <img src="result/term_format.png" alt="파일 형식 설명 이미지" class="term-img">
+                                                <div class="img-overlay">
+                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="term-content">
+                                                <span class="term-title">콘텐츠 파일 형식</span>
+                                                <p class="term-desc">이미지: PNG(무손실/투명), JPG(고압축 Web용), WEBP. 영상: MP4(H.264 코덱, 범용성 최상), MOV.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Term 4: 미디어 플랫폼 -->
+                                        <div class="term-item">
+                                            <div class="term-img-wrapper gallery-item" data-src="result/term_platform.png" data-title="미디어 플랫폼별 종횡비 비교 (16:9 일반 가로 대 9:16 모바일 세로 뷰포트)">
+                                                <img src="result/term_platform.png" alt="미디어 플랫폼 설명 이미지" class="term-img">
+                                                <div class="img-overlay">
+                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="term-content">
+                                                <span class="term-title">주요 미디어 플랫폼</span>
+                                                <p class="term-desc">YouTube(16:9 가로형), Shorts/TikTok/Instagram Reels(9:16 세로형), 각각의 가이드라인에 맞춘 편집 필요.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <!-- Toolbar -->
+            <div class="lightbox-toolbar">
+                <span class="caption" id="lightboxCaption">이미지 뷰어</span>
+                <div class="toolbar-right">
+                    <button class="tool-btn" id="zoomInBtn" title="확대"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="tool-btn" id="zoomOutBtn" title="축소"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="tool-btn" id="zoomResetBtn" title="초기화"><i class="fa-solid fa-compress"></i></button>
+                    <button class="close-btn" id="lightboxCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <!-- Image Area -->
+            <div class="lightbox-image-container">
+                <button class="nav-btn prev" id="lightboxPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <img src="" alt="확대 이미지" id="lightboxImg">
+                <button class="nav-btn next" id="lightboxNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

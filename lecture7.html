@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capcut으로 영상 완성 - AI 영상 마케팅 실무</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
+                <div class="logo-text">
+                    <h1>AI 영상 마케팅 실무</h1>
+                    <span class="subtitle">미래내일일경험 사전직무교육 광고마케팅</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <!-- Progress Tracking -->
+                <div class="progress-container">
+                    <span class="progress-label">나의 학습 진도율</span>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressText">0%</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="테마 변경">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="app-sidebar" id="appSidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-item">
+                                <span class="step-num">1</span>
+                                <div class="item-details">
+                                    <span class="item-title">저작권 & 콘텐츠 이해</span>
+                                    <span class="item-sub">유튜브 및 AI 저작권 핵심</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture2.html" class="nav-item">
+                                <span class="step-num">2</span>
+                                <div class="item-details">
+                                    <span class="item-title">이미지·영상장비 종류</span>
+                                    <span class="item-sub">장비 특성 및 조명 설정</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture3.html" class="nav-item">
+                                <span class="step-num">3</span>
+                                <div class="item-details">
+                                    <span class="item-title">편집 프로그램 비교</span>
+                                    <span class="item-sub">종류별 특징 및 장단점</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture4.html" class="nav-item">
+                                <span class="step-num">4</span>
+                                <div class="item-details">
+                                    <span class="item-title">스토리보드 작성법</span>
+                                    <span class="item-sub">스토리보드 양식 미리보기</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture5.html" class="nav-item">
+                                <span class="step-num">5</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 이미지 제작</span>
+                                    <span class="item-sub">Gemini/ChatGPT 활용</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture6.html" class="nav-item">
+                                <span class="step-num">6</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 영상 제작</span>
+                                    <span class="item-sub">higgsfield 및 AI 비디오</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture7.html" class="nav-item active">
+                                <span class="step-num">7</span>
+                                <div class="item-details">
+                                    <span class="item-title">Capcut으로 영상 완성</span>
+                                    <span class="item-sub">컷편집, 자동자막 및 완성</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="7">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Panels -->
+            <main class="app-main">
+                <!-- Content Swiper Tab Bar -->
+                <div class="content-swiper-bar mb-6">
+                    <button class="swiper-btn active" data-target-step="1">
+                        <i class="fa-solid fa-download swiper-icon"></i>
+                        <span>CapCut 설치 및 PRO 기능</span>
+                    </button>
+                    <button class="swiper-btn" data-target-step="2">
+                        <i class="fa-solid fa-graduation-cap swiper-icon"></i>
+                        <span>실전 편집 튜토리얼</span>
+                    </button>
+                    <div class="swiper-active-bg"></div>
+                </div>
+
+                <div class="sub-step-slider-container">
+                    
+                    <!-- Sub Step 1: CapCut 설치 및 안내 -->
+                    <div class="sub-step active" id="sub-step-1">
+                        <div class="panel-header">
+                            <h2>7. Capcut을 활용한 영상 콘텐츠 완성</h2>
+                            <p class="panel-desc">무료 다운로드 경로, 자동자막 설정 및 유료 Pro 기능을 활성화하는 실무 노하우입니다.</p>
+                        </div>
+                        <div class="grid-layout cols-2">
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-cloud-arrow-down text-accent-blue card-icon"></i> CapCut PC 버전 다운로드</h3>
+                                <div class="card-body">
+                                    <p class="mb-4">CapCut 모바일 버전에 비해 PC 버전은 타임라인 제어가 훨씬 편리하며 4K 고화질 인코딩을 신속하게 지원합니다.</p>
+                                    <a href="https://www.capcut.com/" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                                        <i class="fa-solid fa-download"></i> CapCut 공식 웹사이트 방문
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-circle-info text-accent-purple card-icon"></i> 자동자막 및 7일 무료 Trial 팁</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list-sm">
+                                        <li><strong>자동 캡션 한글 세팅:</strong> 텍스트 메뉴 -> '자동 캡션' 클릭 후 언어를 '한국어'로 설정하면 자막이 실시간 싱크 맵핑됩니다.</li>
+                                        <li><strong>Pro 리소스 7일 무료 체험:</strong> 신규 가입 계정은 PRO 효과 및 유료 스티커 등을 7일간 제약 없이 수출할 수 있습니다.</li>
+                                        <li><strong>인코딩 옵션 설정:</strong> MP4 형식, H.264 코덱, 30fps 설정을 유지하여 플랫폼 최적화를 맞춥니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: 실전 결과물 플레이어 -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>7. Capcut을 활용한 영상 콘텐츠 완성</h2>
+                            <p class="panel-desc">CapCut 프로그램을 활용해 최종적으로 완성한 실무 영상 광고 결과물 리스트입니다.</p>
+                        </div>
+                        
+                        <div class="tutorial-split-layout">
+                            <!-- Left: Tutorial Playlist -->
+                            <div class="content-card glass scrollable-card">
+                                <h3><i class="fa-solid fa-folder-open card-icon text-accent-blue"></i> CapCut 완성 결과물 목록</h3>
+                                <div class="card-body p-0">
+                                    <div class="tutorial-list">
+                                        <!-- Item 1 -->
+                                        <div class="tutorial-item active-tutorial" data-video-id="wSlyk_kQ__c" data-title="CapCut 기본 편집 완성본" data-desc="CapCut PC 버전에서 기본적인 컷 편집, BGM 삽입 및 기본 트랙 연출을 마친 완성본 광고 영상입니다.">
+                                            <span class="t-chapter">Result 1</span>
+                                            <span class="t-title">CapCut 기본 편집 완성본</span>
+                                        </div>
+                                        <!-- Item 2 -->
+                                        <div class="tutorial-item" data-video-id="SkmZ67AV0Xc" data-title="자동자막 & 스티커 꾸미기 완성본" data-desc="AI 자동 캡션(자막)을 생성해 스타일링을 입히고, 강조 스티커 및 시각 필터 특수 효과를 가미해 최종 완성도 높은 연출을 입힌 완성본 광고 영상입니다.">
+                                            <span class="t-chapter">Result 2</span>
+                                            <span class="t-title">자동자막 & 스티커 꾸미기 완성본</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Video Player -->
+                            <div class="content-card glass flex-column justify-between">
+                                <div class="player-header">
+                                    <h3 id="capcutVideoTitle">CapCut 기본 편집 완성본</h3>
+                                    <p id="capcutVideoDesc" class="text-sm text-muted mt-1">CapCut PC 버전에서 기본적인 컷 편집, BGM 삽입 및 기본 트랙 연출을 마친 완성본 광고 영상입니다.</p>
+                                </div>
+                                <div class="video-player-wrapper">
+                                    <iframe 
+                                        id="capcutVideoPlayer" 
+                                        src="https://www.youtube.com/embed/wSlyk_kQ__c?rel=0" 
+                                        title="CapCut Tutorial Player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

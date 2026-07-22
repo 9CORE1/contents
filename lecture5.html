@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성형AI 이미지 제작 - AI 영상 마케팅 실무</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
+                <div class="logo-text">
+                    <h1>AI 영상 마케팅 실무</h1>
+                    <span class="subtitle">미래내일일경험 사전직무교육 광고마케팅</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <!-- Progress Tracking -->
+                <div class="progress-container">
+                    <span class="progress-label">나의 학습 진도율</span>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressText">0%</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="테마 변경">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="app-sidebar" id="appSidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-item">
+                                <span class="step-num">1</span>
+                                <div class="item-details">
+                                    <span class="item-title">저작권 & 콘텐츠 이해</span>
+                                    <span class="item-sub">유튜브 및 AI 저작권 핵심</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture2.html" class="nav-item">
+                                <span class="step-num">2</span>
+                                <div class="item-details">
+                                    <span class="item-title">이미지·영상장비 종류</span>
+                                    <span class="item-sub">장비 특성 및 조명 설정</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture3.html" class="nav-item">
+                                <span class="step-num">3</span>
+                                <div class="item-details">
+                                    <span class="item-title">편집 프로그램 비교</span>
+                                    <span class="item-sub">종류별 특징 및 장단점</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture4.html" class="nav-item">
+                                <span class="step-num">4</span>
+                                <div class="item-details">
+                                    <span class="item-title">스토리보드 작성법</span>
+                                    <span class="item-sub">스토리보드 양식 미리보기</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture5.html" class="nav-item active">
+                                <span class="step-num">5</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 이미지 제작</span>
+                                    <span class="item-sub">Gemini/ChatGPT 활용</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture6.html" class="nav-item">
+                                <span class="step-num">6</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 영상 제작</span>
+                                    <span class="item-sub">higgsfield 및 AI 비디오</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture7.html" class="nav-item">
+                                <span class="step-num">7</span>
+                                <div class="item-details">
+                                    <span class="item-title">Capcut으로 영상 완성</span>
+                                    <span class="item-sub">컷편집, 자동자막 및 완성</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="7">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Panels -->
+            <main class="app-main">
+                <!-- Content Swiper Tab Bar -->
+                <div class="content-swiper-bar mb-6">
+                    <button class="swiper-btn active" data-target-step="1">
+                        <i class="fa-solid fa-copy swiper-icon"></i>
+                        <span>실습 프롬프트 복사</span>
+                    </button>
+                    <button class="swiper-btn" data-target-step="2">
+                        <i class="fa-solid fa-images swiper-icon"></i>
+                        <span>캐릭터 에셋 갤러리</span>
+                    </button>
+                    <div class="swiper-active-bg"></div>
+                </div>
+
+                <div class="sub-step-slider-container">
+                    
+                    <!-- Sub Step 1: 프롬프트 복사 구역 -->
+                    <div class="sub-step active" id="sub-step-1">
+                        <div class="panel-header">
+                            <h2>5. 생성형AI를 활용한 이미지 제작</h2>
+                            <p class="panel-desc">ChatGPT, Gemini 및 Midjourney를 통해 영상 마케팅용 메인 캐릭터 및 컷 이미지를 만드는 실습 프롬프트입니다.</p>
+                        </div>
+                        
+                        <!-- Promptmaker Link Card -->
+                        <div class="content-card glass mb-6">
+                            <h3><i class="fa-solid fa-wand-magic-sparkles text-accent-purple card-icon"></i> 전용 프롬프트 생성 툴 바로가기</h3>
+                            <div class="card-body">
+                                <p class="mb-4">강사님이 제공한 전용 Promptmaker 웹도구를 통해 클릭 몇 번만으로 고품질 캐릭터 이미지 생성을 위한 완성형 프롬프트를 조립할 수 있습니다.</p>
+                                <a href="../promptmaker/index.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-up-right-from-square"></i> Promptmaker 툴 실행하기
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Prompt Copier List -->
+                        <div class="grid-layout cols-1">
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-code text-accent-blue card-icon"></i> 실습용 이미지 프롬프트 복사기</h3>
+                                <div class="card-body">
+                                    
+                                    <!-- Prompt Item 1 -->
+                                    <div class="prompt-box">
+                                        <div class="prompt-header">
+                                            <span class="prompt-title">캐릭터 일관성 시트 프롬프트</span>
+                                            <button class="copy-btn btn btn-outline btn-xs" data-target="promptText1">
+                                                <i class="fa-regular fa-copy"></i> 복사하기
+                                            </button>
+                                        </div>
+                                        <pre class="prompt-code" id="promptText1">Multiple angles character sheet of a South Korean female marketer in her late 20s, wearing business casual, smart and friendly expression, front view, profile view, 3/4 view, high-quality, professional photography, isolated on solid light gray background --ar 16:9</pre>
+                                    </div>
+
+                                    <!-- Prompt Item 2 -->
+                                    <div class="prompt-box mt-4">
+                                        <div class="prompt-header">
+                                            <span class="prompt-title">특정 업무 수행 액션 프롬프트</span>
+                                            <button class="copy-btn btn btn-outline btn-xs" data-target="promptText2">
+                                                <i class="fa-regular fa-copy"></i> 복사하기
+                                            </button>
+                                        </div>
+                                        <pre class="prompt-code" id="promptText2">A South Korean female marketer in her late 20s, smart and friendly expression, working on a sleek laptop in a modern bright creative office, warm natural sunlight through big windows, cinematic lighting, photorealistic, 8k --ar 16:9</pre>
+                                    </div>
+
+                                    <!-- Prompt Item 3 -->
+                                    <div class="prompt-box mt-4">
+                                        <div class="prompt-header">
+                                            <span class="prompt-title">제품 시연 광고 연출 프롬프트</span>
+                                            <button class="copy-btn btn btn-outline btn-xs" data-target="promptText3">
+                                                <i class="fa-regular fa-copy"></i> 복사하기
+                                            </button>
+                                        </div>
+                                        <pre class="prompt-code" id="promptText3">A South Korean female marketer in her late 20s, holding a new tech product smiling happily, showcasing the product to the camera, bright neon office background, advertising photography, shot on 85mm lens, high fidelity --ar 16:9</pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: 캐릭터 이미지 갤러리 -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>5. 생성형AI를 활용한 이미지 제작</h2>
+                            <p class="panel-desc">Promptmaker 툴을 통해 AI로 정교하게 제작 완료된 실습용 캐릭터 에셋들을 확인하고 클릭하여 다운로드합니다.</p>
+                        </div>
+                        <div class="content-card glass">
+                            <h3><i class="fa-solid fa-image text-accent-blue card-icon"></i> 캐릭터 모델 및 스토리보드 소스 리스트</h3>
+                            <div class="card-body">
+                                <div class="image-gallery-grid">
+                                    <div class="gallery-item" data-src="result/CS_model_face.png" data-title="캐릭터 메인 얼굴 모델링 피드">
+                                        <img src="result/CS_model_face.png" alt="캐릭터 기본 얼굴">
+                                        <div class="img-overlay">
+                                            <span>CS_model_face.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/CS_apply01.png" data-title="실습용 캐릭터 포즈 1 - 대기">
+                                        <img src="result/CS_apply01.png" alt="대기 포즈">
+                                        <div class="img-overlay">
+                                            <span>CS_apply01.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/CS_apply02.png" data-title="실습용 캐릭터 포즈 2 - 지목">
+                                        <img src="result/CS_apply02.png" alt="지목 포즈">
+                                        <div class="img-overlay">
+                                            <span>CS_apply02.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/CS_apply03.png" data-title="실습용 캐릭터 포즈 3 - 놀람">
+                                        <img src="result/CS_apply03.png" alt="놀람 포즈">
+                                        <div class="img-overlay">
+                                            <span>CS_apply03.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/CS_apply04.png" data-title="실습용 캐릭터 포즈 4 - 자신감">
+                                        <img src="result/CS_apply04.png" alt="자신감 포즈">
+                                        <div class="img-overlay">
+                                            <span>CS_apply04.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/character_prompt.txt" data-title="캐릭터 일관성 텍스트 파일">
+                                        <div class="txt-file-fallback">
+                                            <i class="fa-solid fa-file-lines txt-icon"></i>
+                                            <span>character_prompt.txt</span>
+                                        </div>
+                                        <div class="img-overlay">
+                                            <span>텍스트 파일 열기</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/cs_model_result.png" data-title="캐릭터 생성 최종 렌더 결과물">
+                                        <img src="result/cs_model_result.png" alt="결과물 1">
+                                        <div class="img-overlay">
+                                            <span>cs_model_result.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/cs_model_result2.png" data-title="캐릭터 생성 최종 렌더 결과물 2">
+                                        <img src="result/cs_model_result2.png" alt="결과물 2">
+                                        <div class="img-overlay">
+                                            <span>cs_model_result2.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/cs_model_result3.png" data-title="캐릭터 생성 최종 렌더 결과물 3">
+                                        <img src="result/cs_model_result3.png" alt="결과물 3">
+                                        <div class="img-overlay">
+                                            <span>cs_model_result3.png</span>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/cs_model_result4.png" data-title="캐릭터 생성 최종 렌더 결과물 4">
+                                        <img src="result/cs_model_result4.png" alt="결과물 4">
+                                        <div class="img-overlay">
+                                            <span>cs_model_result4.png</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <!-- Toolbar -->
+            <div class="lightbox-toolbar">
+                <span class="caption" id="lightboxCaption">이미지 뷰어</span>
+                <div class="toolbar-right">
+                    <button class="tool-btn" id="zoomInBtn" title="확대"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="tool-btn" id="zoomOutBtn" title="축소"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="tool-btn" id="zoomResetBtn" title="초기화"><i class="fa-solid fa-compress"></i></button>
+                    <button class="close-btn" id="lightboxCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <!-- Image Area -->
+            <div class="lightbox-image-container">
+                <button class="nav-btn prev" id="lightboxPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <img src="" alt="확대 이미지" id="lightboxImg">
+                <button class="nav-btn next" id="lightboxNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Popup for Clipboard Copy -->
+    <div class="copy-toast" id="copyToast">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span>클립보드에 프롬프트가 복사되었습니다!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

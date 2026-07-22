@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성형AI 영상 제작 - AI 영상 마케팅 실무</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
+                <div class="logo-text">
+                    <h1>AI 영상 마케팅 실무</h1>
+                    <span class="subtitle">미래내일일경험 사전직무교육 광고마케팅</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <!-- Progress Tracking -->
+                <div class="progress-container">
+                    <span class="progress-label">나의 학습 진도율</span>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressText">0%</span>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="테마 변경">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="app-sidebar" id="appSidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-item">
+                                <span class="step-num">1</span>
+                                <div class="item-details">
+                                    <span class="item-title">저작권 & 콘텐츠 이해</span>
+                                    <span class="item-sub">유튜브 및 AI 저작권 핵심</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture2.html" class="nav-item">
+                                <span class="step-num">2</span>
+                                <div class="item-details">
+                                    <span class="item-title">이미지·영상장비 종류</span>
+                                    <span class="item-sub">장비 특성 및 조명 설정</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture3.html" class="nav-item">
+                                <span class="step-num">3</span>
+                                <div class="item-details">
+                                    <span class="item-title">편집 프로그램 비교</span>
+                                    <span class="item-sub">종류별 특징 및 장단점</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture4.html" class="nav-item">
+                                <span class="step-num">4</span>
+                                <div class="item-details">
+                                    <span class="item-title">스토리보드 작성법</span>
+                                    <span class="item-sub">스토리보드 양식 미리보기</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture5.html" class="nav-item">
+                                <span class="step-num">5</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 이미지 제작</span>
+                                    <span class="item-sub">Gemini/ChatGPT 활용</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture6.html" class="nav-item active">
+                                <span class="step-num">6</span>
+                                <div class="item-details">
+                                    <span class="item-title">생성형AI 영상 제작</span>
+                                    <span class="item-sub">higgsfield 및 AI 비디오</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lecture7.html" class="nav-item">
+                                <span class="step-num">7</span>
+                                <div class="item-details">
+                                    <span class="item-title">Capcut으로 영상 완성</span>
+                                    <span class="item-sub">컷편집, 자동자막 및 완성</span>
+                                </div>
+                                <input type="checkbox" class="step-check" data-step="7">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Panels -->
+            <main class="app-main">
+                <!-- Content Swiper Tab Bar -->
+                <div class="content-swiper-bar mb-6">
+                    <button class="swiper-btn active" data-target-step="1">
+                        <i class="fa-solid fa-circle-play swiper-icon"></i>
+                        <span>AI 영상 제작 가이드</span>
+                    </button>
+                    <button class="swiper-btn" data-target-step="2">
+                        <i class="fa-solid fa-code-branch swiper-icon"></i>
+                        <span>엔진별 결과물 비교</span>
+                    </button>
+                    <div class="swiper-active-bg"></div>
+                </div>
+
+                <div class="sub-step-slider-container">
+                    
+                    <!-- Sub Step 1: AI 비디오 제작 팁 -->
+                    <div class="sub-step active" id="sub-step-1">
+                        <div class="panel-header">
+                            <h2>6. 생성형AI를 활용한 영상 제작</h2>
+                            <p class="panel-desc">스마트폰 캐릭터 일관성 영상화 기술 및 모바일 특화 AI 비디오 툴인 higgsfield 활용 기초 단계입니다.</p>
+                        </div>
+                        <div class="grid-layout cols-1">
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-mobile-screen-button card-icon text-accent-purple"></i> higgsfield.ai 툴의 특장점 및 무료 이용 팁</h3>
+                                <div class="card-body">
+                                    <ul class="bullet-list">
+                                        <li><strong>모바일 세로형(Shorts) 특화:</strong> 모바일 애플리케이션으로 접근성이 높으며 숏폼 전용 9:16 비율 비디오 생성에 매우 우수합니다.</li>
+                                        <li><strong>24시간마다 20크레딧 무료 지급:</strong> 가입 후 매일 충전되는 기본 무료 크레딧을 이용해 실무형 프로토타입 광고 영상을 부담 없이 여러 번 생성해볼 수 있습니다.</li>
+                                        <li><strong>캐릭터 참조 모드(Character Reference):</strong> 정면 사진 한 장만 넣어도 그 인물이 달리기, 점프 등 지정된 복잡한 액션을 취하는 움직임 시퀀스를 고스란히 구현해줍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: 비디오 비교 플레이어 구역 -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>6. 생성형AI를 활용한 영상 제작</h2>
+                            <p class="panel-desc">프롬프트 고도화 여부와 AI 비디오 모델 성능(Kling, Seedance 등) 차이에 따른 일부공개 수강 결과물 비교 피드입니다.</p>
+                        </div>
+                        
+                        <div class="video-split-layout">
+                            <!-- Left: Video Selector Menu -->
+                            <div class="content-card glass scrollable-card">
+                                <h3><i class="fa-solid fa-list card-icon text-accent-blue"></i> 영상 목록</h3>
+                                <div class="card-body p-0">
+                                    <div class="video-list">
+                                        <!-- Item 1 -->
+                                        <div class="video-select-item active" data-video-id="PZkXdko-YA4" data-video-type="shorts">
+                                            <div class="v-badge shorts">Shorts</div>
+                                            <span class="v-title">프롬프트 수정 전 (물리법칙 위배 움직임)</span>
+                                        </div>
+                                        <!-- Item 2 -->
+                                        <div class="video-select-item" data-video-id="2mnmhfSB858" data-video-type="shorts">
+                                            <div class="v-badge shorts">Shorts</div>
+                                            <span class="v-title">Seedance 2.0 mini 수정 전 숏폼</span>
+                                        </div>
+                                        <!-- Item 3 -->
+                                        <div class="video-select-item" data-video-id="EDOPMsvdMMo" data-video-type="shorts">
+                                            <div class="v-badge shorts">Shorts</div>
+                                            <span class="v-title">Seedance 2.0 (프롬프트 세부 묘사 수정)</span>
+                                        </div>
+                                        <!-- Item 4 -->
+                                        <div class="video-select-item" data-video-id="2U8-ympkdo0" data-video-type="shorts">
+                                            <div class="v-badge shorts">Shorts</div>
+                                            <span class="v-title">Kling 3.0 (Motion Control 적용)</span>
+                                        </div>
+                                        <!-- Item 5 -->
+                                        <div class="video-select-item" data-video-id="44f86T3UdJM" data-video-type="standard">
+                                            <div class="v-badge standard">일반영상</div>
+                                            <span class="v-title">Omni Flash 적용 가로형 생성 영상</span>
+                                        </div>
+                                        <!-- Item 6 -->
+                                        <div class="video-select-item" data-video-id="DBJGwULkyl4" data-video-type="standard">
+                                            <div class="v-badge standard">일반영상</div>
+                                            <span class="v-title">Seedance 2.0 가로형 예시 영상</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Video Player -->
+                            <div class="content-card glass flex-column justify-between">
+                                <div class="player-header">
+                                    <h3 id="currentVideoTitle">프롬프트 수정 전 (물리법칙 위배 움직임)</h3>
+                                    <p id="currentVideoDesc" class="text-sm text-muted mt-1">프롬프트 엔지니어링 개선 전, AI 동영상 생성 초기에 나타나는 왜곡 현상과 전형적인 물리법칙 위배 움직임을 비교 분석하는 예제입니다.</p>
+                                </div>
+                                <div class="video-player-wrapper shorts-player" id="videoPlayerWrapper">
+                                    <iframe 
+                                        id="mainVideoPlayer" 
+                                        src="https://www.youtube.com/embed/PZkXdko-YA4?rel=0" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
