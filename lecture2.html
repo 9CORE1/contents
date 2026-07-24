@@ -123,6 +123,14 @@
                                 <input type="checkbox" class="step-check" data-step="7">
                             </a>
                         </li>
+                        <li>
+                            <div class="nav-item copy-email-btn" style="cursor: pointer;">
+                                <span class="step-num"><i class="fa-regular fa-envelope"></i></span>
+                                <div class="item-details">
+                                    <span class="item-title">메일주소 복사하기</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -130,16 +138,34 @@
             <!-- Main Content Panels -->
             <main class="app-main">
                 <!-- Content Swiper Tab Bar -->
-                <div class="content-swiper-bar mb-6">
-                    <button class="swiper-btn active" data-target-step="1">
-                        <i class="fa-solid fa-camera swiper-icon"></i>
-                        <span>촬영/음향 장비 종류</span>
-                    </button>
-                    <button class="swiper-btn" data-target-step="2">
-                        <i class="fa-solid fa-lightbulb swiper-icon"></i>
-                        <span>실전 3점 조명 가이드</span>
-                    </button>
-                    <div class="swiper-active-bg"></div>
+                <div class="content-swiper-wrapper">
+                    <div class="content-swiper-bar">
+                        <button class="swiper-btn active" data-target-step="1">
+                            <i class="fa-solid fa-camera swiper-icon"></i>
+                            <span>촬영/음향 장비 종류</span>
+                        </button>
+                        <button class="swiper-btn" data-target-step="2">
+                            <i class="fa-solid fa-lightbulb swiper-icon"></i>
+                            <span>실전 3점 조명 가이드</span>
+                        </button>
+                        <div class="swiper-active-bg"></div>
+                    </div>
+                    <div class="fav-dropdown-container">
+                        <select class="fav-select">
+                            <option value="" disabled selected>⭐ 즐겨찾기</option>
+                            <option value="https://9core1.github.io/promptmaker/">promptmaker</option>
+                            <option value="https://9core1.github.io/promptories/">promptories</option>
+                            <option value="https://higgsfield.ai/">higgsfield</option>
+                            <option value="https://vrew.ai/ko/">Vrew</option>
+                            <option value="https://firefly.adobe.com/">Adobe Firefly</option>
+                            <option value="https://www.capcut.com/ko-kr/">CapCut</option>
+                            <option value="https://pixabay.com/">pixabay</option>
+                            <option value="https://www.pinterest.com/">Pinterest</option>
+                            <option value="https://chatgpt.com/">chatGPT</option>
+                            <option value="https://gemini.google.com/">Gemini</option>
+                            <option value="https://claude.ai/">Claude</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="sub-step-slider-container">

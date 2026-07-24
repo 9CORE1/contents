@@ -126,6 +126,14 @@
                                 <input type="checkbox" class="step-check" data-step="7">
                             </a>
                         </li>
+                        <li>
+                            <div class="nav-item copy-email-btn" style="cursor: pointer;">
+                                <span class="step-num"><i class="fa-regular fa-envelope"></i></span>
+                                <div class="item-details">
+                                    <span class="item-title">메일주소 복사하기</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -133,16 +141,34 @@
             <!-- Main Content Panels -->
             <main class="app-main">
                 <!-- Content Swiper Tab Bar -->
-                <div class="content-swiper-bar mb-6">
-                    <button class="swiper-btn active" data-target-step="1">
-                        <i class="fa-solid fa-list-check swiper-icon"></i>
-                        <span>스토리보드 작성 요소</span>
-                    </button>
-                    <button class="swiper-btn" data-target-step="2">
-                        <i class="fa-solid fa-file-invoice swiper-icon"></i>
-                        <span>추천 사이트 & 미리보기</span>
-                    </button>
-                    <div class="swiper-active-bg"></div>
+                <div class="content-swiper-wrapper">
+                    <div class="content-swiper-bar">
+                        <button class="swiper-btn active" data-target-step="1">
+                            <i class="fa-solid fa-list-check swiper-icon"></i>
+                            <span>스토리보드 작성 요소</span>
+                        </button>
+                        <button class="swiper-btn" data-target-step="2">
+                            <i class="fa-solid fa-file-invoice swiper-icon"></i>
+                            <span>추천 사이트 & 미리보기</span>
+                        </button>
+                        <div class="swiper-active-bg"></div>
+                    </div>
+                    <div class="fav-dropdown-container">
+                        <select class="fav-select">
+                            <option value="" disabled selected>⭐ 즐겨찾기</option>
+                            <option value="https://9core1.github.io/promptmaker/">promptmaker</option>
+                            <option value="https://9core1.github.io/promptories/">promptories</option>
+                            <option value="https://higgsfield.ai/">higgsfield</option>
+                            <option value="https://vrew.ai/ko/">Vrew</option>
+                            <option value="https://firefly.adobe.com/">Adobe Firefly</option>
+                            <option value="https://www.capcut.com/ko-kr/">CapCut</option>
+                            <option value="https://pixabay.com/">pixabay</option>
+                            <option value="https://www.pinterest.com/">Pinterest</option>
+                            <option value="https://chatgpt.com/">chatGPT</option>
+                            <option value="https://gemini.google.com/">Gemini</option>
+                            <option value="https://claude.ai/">Claude</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="sub-step-slider-container">
@@ -274,13 +300,27 @@
         </div>
     </div>
 
-    <!-- Lightbox Zoom Modal for Images -->
-    <div id="lightboxModal" class="lightbox-modal">
-        <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
-        <div class="lightbox-content-wrapper">
-            <img class="lightbox-content" id="lightboxImg">
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <!-- Toolbar -->
+            <div class="lightbox-toolbar">
+                <span class="caption" id="lightboxCaption">이미지 뷰어</span>
+                <div class="toolbar-right">
+                    <button class="tool-btn" id="zoomInBtn" title="확대"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="tool-btn" id="zoomOutBtn" title="축소"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="tool-btn" id="zoomResetBtn" title="초기화"><i class="fa-solid fa-compress"></i></button>
+                    <button class="close-btn" id="lightboxCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <!-- Image Area -->
+            <div class="lightbox-image-container">
+                <button class="nav-btn prev" id="lightboxPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <img src="" alt="확대 이미지" id="lightboxImg">
+                <button class="nav-btn next" id="lightboxNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </div>
-        <div id="lightboxCaption" class="lightbox-caption"></div>
     </div>
 
     <script src="app.js"></script>

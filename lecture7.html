@@ -123,6 +123,14 @@
                                 <input type="checkbox" class="step-check" data-step="7">
                             </a>
                         </li>
+                        <li>
+                            <div class="nav-item copy-email-btn" style="cursor: pointer;">
+                                <span class="step-num"><i class="fa-regular fa-envelope"></i></span>
+                                <div class="item-details">
+                                    <span class="item-title">메일주소 복사하기</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -130,16 +138,34 @@
             <!-- Main Content Panels -->
             <main class="app-main">
                 <!-- Content Swiper Tab Bar -->
-                <div class="content-swiper-bar mb-6">
-                    <button class="swiper-btn active" data-target-step="1">
-                        <i class="fa-solid fa-download swiper-icon"></i>
-                        <span>CapCut 설치 및 PRO 기능</span>
-                    </button>
-                    <button class="swiper-btn" data-target-step="2">
-                        <i class="fa-solid fa-graduation-cap swiper-icon"></i>
-                        <span>실전 편집 튜토리얼</span>
-                    </button>
-                    <div class="swiper-active-bg"></div>
+                <div class="content-swiper-wrapper">
+                    <div class="content-swiper-bar">
+                        <button class="swiper-btn active" data-target-step="1">
+                            <i class="fa-solid fa-download swiper-icon"></i>
+                            <span>CapCut 설치 및 PRO 기능</span>
+                        </button>
+                        <button class="swiper-btn" data-target-step="2">
+                            <i class="fa-solid fa-graduation-cap swiper-icon"></i>
+                            <span>실전 편집 튜토리얼</span>
+                        </button>
+                        <div class="swiper-active-bg"></div>
+                    </div>
+                    <div class="fav-dropdown-container">
+                        <select class="fav-select">
+                            <option value="" disabled selected>⭐ 즐겨찾기</option>
+                            <option value="https://9core1.github.io/promptmaker/">promptmaker</option>
+                            <option value="https://9core1.github.io/promptories/">promptories</option>
+                            <option value="https://higgsfield.ai/">higgsfield</option>
+                            <option value="https://vrew.ai/ko/">Vrew</option>
+                            <option value="https://firefly.adobe.com/">Adobe Firefly</option>
+                            <option value="https://www.capcut.com/ko-kr/">CapCut</option>
+                            <option value="https://pixabay.com/">pixabay</option>
+                            <option value="https://www.pinterest.com/">Pinterest</option>
+                            <option value="https://chatgpt.com/">chatGPT</option>
+                            <option value="https://gemini.google.com/">Gemini</option>
+                            <option value="https://claude.ai/">Claude</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="sub-step-slider-container">
@@ -155,9 +181,11 @@
                                 <h3><i class="fa-solid fa-cloud-arrow-down text-accent-blue card-icon"></i> CapCut PC 버전 다운로드</h3>
                                 <div class="card-body">
                                     <p class="mb-4">CapCut 모바일 버전에 비해 PC 버전은 타임라인 제어가 훨씬 편리하며 4K 고화질 인코딩을 신속하게 지원합니다.</p>
-                                    <a href="https://www.capcut.com/" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                                        <i class="fa-solid fa-download"></i> CapCut 공식 웹사이트 방문
-                                    </a>
+                                    <div class="card-action-area">
+                                        <a href="https://www.capcut.com/" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px; width: auto;">
+                                            <i class="fa-solid fa-download"></i> CapCut 공식 웹사이트 방문
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -188,14 +216,14 @@
                                 <div class="card-body p-0">
                                     <div class="tutorial-list">
                                         <!-- Item 1 -->
-                                        <div class="tutorial-item active-tutorial" data-video-id="wSlyk_kQ__c" data-title="CapCut 기본 편집 완성본" data-desc="CapCut PC 버전에서 기본적인 컷 편집, BGM 삽입 및 기본 트랙 연출을 마친 완성본 광고 영상입니다.">
+                                        <div class="tutorial-item active-tutorial" data-video-id="wSlyk_kQ__c" data-title="기본 편집" data-desc="CapCut PC 버전에서 기본적인 컷 편집, BGM 삽입 및 기본 트랙 연출을 마친 완성본 광고 영상입니다.">
                                             <span class="t-chapter">Result 1</span>
-                                            <span class="t-title">CapCut 기본 편집 완성본</span>
+                                            <span class="t-title">기본 편집</span>
                                         </div>
                                         <!-- Item 2 -->
-                                        <div class="tutorial-item" data-video-id="SkmZ67AV0Xc" data-title="자동자막 & 스티커 꾸미기 완성본" data-desc="AI 자동 캡션(자막)을 생성해 스타일링을 입히고, 강조 스티커 및 시각 필터 특수 효과를 가미해 최종 완성도 높은 연출을 입힌 완성본 광고 영상입니다.">
+                                        <div class="tutorial-item" data-video-id="SkmZ67AV0Xc" data-title="자동자막과 스티커 꾸미기" data-desc="AI 자동 캡션(자막)을 생성해 스타일링을 입히고, 강조 스티커 및 시각 필터 특수 효과를 가미해 최종 완성도 높은 연출을 입힌 완성본 광고 영상입니다.">
                                             <span class="t-chapter">Result 2</span>
-                                            <span class="t-title">자동자막 & 스티커 꾸미기 완성본</span>
+                                            <span class="t-title">자동자막과 스티커 꾸미기</span>
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +232,7 @@
                             <!-- Right: Video Player -->
                             <div class="content-card glass flex-column justify-between">
                                 <div class="player-header">
-                                    <h3 id="capcutVideoTitle">CapCut 기본 편집 완성본</h3>
+                                    <h3 id="capcutVideoTitle">기본 편집</h3>
                                     <p id="capcutVideoDesc" class="text-sm text-muted mt-1">CapCut PC 버전에서 기본적인 컷 편집, BGM 삽입 및 기본 트랙 연출을 마친 완성본 광고 영상입니다.</p>
                                 </div>
                                 <div class="video-player-wrapper">

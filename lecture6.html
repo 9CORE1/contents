@@ -123,6 +123,14 @@
                                 <input type="checkbox" class="step-check" data-step="7">
                             </a>
                         </li>
+                        <li>
+                            <div class="nav-item copy-email-btn" style="cursor: pointer;">
+                                <span class="step-num"><i class="fa-regular fa-envelope"></i></span>
+                                <div class="item-details">
+                                    <span class="item-title">메일주소 복사하기</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -130,16 +138,34 @@
             <!-- Main Content Panels -->
             <main class="app-main">
                 <!-- Content Swiper Tab Bar -->
-                <div class="content-swiper-bar mb-6">
-                    <button class="swiper-btn active" data-target-step="1">
-                        <i class="fa-solid fa-circle-play swiper-icon"></i>
-                        <span>AI 영상 제작 가이드</span>
-                    </button>
-                    <button class="swiper-btn" data-target-step="2">
-                        <i class="fa-solid fa-code-branch swiper-icon"></i>
-                        <span>엔진별 결과물 비교</span>
-                    </button>
-                    <div class="swiper-active-bg"></div>
+                <div class="content-swiper-wrapper">
+                    <div class="content-swiper-bar">
+                        <button class="swiper-btn active" data-target-step="1">
+                            <i class="fa-solid fa-circle-play swiper-icon"></i>
+                            <span>AI 영상 제작 가이드</span>
+                        </button>
+                        <button class="swiper-btn" data-target-step="2">
+                            <i class="fa-solid fa-code-branch swiper-icon"></i>
+                            <span>엔진별 결과물 비교</span>
+                        </button>
+                        <div class="swiper-active-bg"></div>
+                    </div>
+                    <div class="fav-dropdown-container">
+                        <select class="fav-select">
+                            <option value="" disabled selected>⭐ 즐겨찾기</option>
+                            <option value="https://9core1.github.io/promptmaker/">promptmaker</option>
+                            <option value="https://9core1.github.io/promptories/">promptories</option>
+                            <option value="https://higgsfield.ai/">higgsfield</option>
+                            <option value="https://vrew.ai/ko/">Vrew</option>
+                            <option value="https://firefly.adobe.com/">Adobe Firefly</option>
+                            <option value="https://www.capcut.com/ko-kr/">CapCut</option>
+                            <option value="https://pixabay.com/">pixabay</option>
+                            <option value="https://www.pinterest.com/">Pinterest</option>
+                            <option value="https://chatgpt.com/">chatGPT</option>
+                            <option value="https://gemini.google.com/">Gemini</option>
+                            <option value="https://claude.ai/">Claude</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="sub-step-slider-container">
@@ -154,11 +180,49 @@
                             <div class="content-card glass">
                                 <h3><i class="fa-solid fa-mobile-screen-button card-icon text-accent-purple"></i> higgsfield.ai 툴의 특장점 및 무료 이용 팁</h3>
                                 <div class="card-body">
-                                    <ul class="bullet-list">
+                                    <ul class="bullet-list mb-6">
                                         <li><strong>모바일 세로형(Shorts) 특화:</strong> 모바일 애플리케이션으로 접근성이 높으며 숏폼 전용 9:16 비율 비디오 생성에 매우 우수합니다.</li>
                                         <li><strong>24시간마다 20크레딧 무료 지급:</strong> 가입 후 매일 충전되는 기본 무료 크레딧을 이용해 실무형 프로토타입 광고 영상을 부담 없이 여러 번 생성해볼 수 있습니다.</li>
                                         <li><strong>캐릭터 참조 모드(Character Reference):</strong> 정면 사진 한 장만 넣어도 그 인물이 달리기, 점프 등 지정된 복잡한 액션을 취하는 움직임 시퀀스를 고스란히 구현해줍니다.</li>
                                     </ul>
+                                    <div class="card-action-area">
+                                        <a href="https://higgsfield.ai" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px; width: auto;">
+                                            <i class="fa-solid fa-square-arrow-up-right"></i> higgsfield.ai 공식 사이트 바로가기
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-card glass">
+                                <h3><i class="fa-solid fa-person-running card-icon text-accent-blue"></i> ZEPETO의 동작 템플릿 활용</h3>
+                                <div class="card-body">
+                                    <p class="mb-4">제페토(ZEPETO) 어플리케이션 내의 캐릭터 제스처나 댄스 동작 템플릿을 비디오 촬영 및 추출하여, AI 캐릭터 참조 비디오(Character Reference) 제작을 위한 원본 모션 소스로 유용하게 활용할 수 있습니다. 이미지를 클릭하여 크게 확인해 보세요.</p>
+                                    <div class="image-gallery-grid" style="grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px;">
+                                        <div class="gallery-item" data-src="result/zepeto00.png" data-title="ZEPETO 동작 템플릿 활용 가이드 0" style="aspect-ratio: auto; height: auto; max-width: 200px; margin: 0 auto;">
+                                            <img src="result/zepeto00.png" alt="ZEPETO 템플릿 0" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                                            <div class="img-overlay">
+                                                <span>zepeto00.png (클릭하여 크게 보기)</span>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item" data-src="result/zepeto01.png" data-title="ZEPETO 동작 템플릿 활용 가이드 1" style="aspect-ratio: auto; height: auto; max-width: 200px; margin: 0 auto;">
+                                            <img src="result/zepeto01.png" alt="ZEPETO 템플릿 1" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                                            <div class="img-overlay">
+                                                <span>zepeto01.png (클릭하여 크게 보기)</span>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item" data-src="result/zepeto02.png" data-title="ZEPETO 동작 템플릿 활용 가이드 2" style="aspect-ratio: auto; height: auto; max-width: 200px; margin: 0 auto;">
+                                            <img src="result/zepeto02.png" alt="ZEPETO 템플릿 2" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                                            <div class="img-overlay">
+                                                <span>zepeto02.png (클릭하여 크게 보기)</span>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item" data-src="result/zepeto03.png" data-title="ZEPETO 동작 템플릿 활용 가이드 3" style="aspect-ratio: auto; height: auto; max-width: 200px; margin: 0 auto;">
+                                            <img src="result/zepeto03.png" alt="ZEPETO 템플릿 3" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                                            <div class="img-overlay">
+                                                <span>zepeto03.png (클릭하여 크게 보기)</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -180,32 +244,37 @@
                                         <!-- Item 1 -->
                                         <div class="video-select-item active" data-video-id="PZkXdko-YA4" data-video-type="shorts">
                                             <div class="v-badge shorts">Shorts</div>
-                                            <span class="v-title">프롬프트 수정 전 (물리법칙 위배 움직임)</span>
+                                            <span class="v-title">Kling 2.0 활용</span>
                                         </div>
                                         <!-- Item 2 -->
                                         <div class="video-select-item" data-video-id="2mnmhfSB858" data-video-type="shorts">
                                             <div class="v-badge shorts">Shorts</div>
-                                            <span class="v-title">Seedance 2.0 mini 수정 전 숏폼</span>
+                                            <span class="v-title">Seedance 2.0 mini 활용</span>
                                         </div>
                                         <!-- Item 3 -->
                                         <div class="video-select-item" data-video-id="EDOPMsvdMMo" data-video-type="shorts">
                                             <div class="v-badge shorts">Shorts</div>
-                                            <span class="v-title">Seedance 2.0 (프롬프트 세부 묘사 수정)</span>
+                                            <span class="v-title">Seedance 2.0 활용</span>
                                         </div>
                                         <!-- Item 4 -->
                                         <div class="video-select-item" data-video-id="2U8-ympkdo0" data-video-type="shorts">
                                             <div class="v-badge shorts">Shorts</div>
-                                            <span class="v-title">Kling 3.0 (Motion Control 적용)</span>
+                                            <span class="v-title">Kling 3.0 Motion Control</span>
                                         </div>
                                         <!-- Item 5 -->
                                         <div class="video-select-item" data-video-id="44f86T3UdJM" data-video-type="standard">
                                             <div class="v-badge standard">일반영상</div>
-                                            <span class="v-title">Omni Flash 적용 가로형 생성 영상</span>
+                                            <span class="v-title">Google Omni Flash 활용</span>
                                         </div>
                                         <!-- Item 6 -->
-                                        <div class="video-select-item" data-video-id="DBJGwULkyl4" data-video-type="standard">
-                                            <div class="v-badge standard">일반영상</div>
-                                            <span class="v-title">Seedance 2.0 가로형 예시 영상</span>
+                                        <div class="video-select-item" data-video-id="DBJGwULkyl4" data-video-type="shorts">
+                                            <div class="v-badge shorts">Shorts</div>
+                                            <span class="v-title">Seedance 2.0 활용</span>
+                                        </div>
+                                        <!-- Item 7 -->
+                                        <div class="video-select-item" data-video-id="JnvFk4L2vqU" data-video-type="shorts">
+                                            <div class="v-badge shorts">Shorts</div>
+                                            <span class="v-title">Gemini에서 영상 제작</span>
                                         </div>
                                     </div>
                                 </div>
@@ -214,10 +283,10 @@
                             <!-- Right: Video Player -->
                             <div class="content-card glass flex-column justify-between">
                                 <div class="player-header">
-                                    <h3 id="currentVideoTitle">프롬프트 수정 전 (물리법칙 위배 움직임)</h3>
+                                    <h3 id="currentVideoTitle">Kling 2.0 활용</h3>
                                     <p id="currentVideoDesc" class="text-sm text-muted mt-1">프롬프트 엔지니어링 개선 전, AI 동영상 생성 초기에 나타나는 왜곡 현상과 전형적인 물리법칙 위배 움직임을 비교 분석하는 예제입니다.</p>
                                 </div>
-                                <div class="video-player-wrapper shorts-player" id="videoPlayerWrapper">
+                                <div class="video-player-wrapper" id="videoPlayerWrapper">
                                     <iframe 
                                         id="mainVideoPlayer" 
                                         src="https://www.youtube.com/embed/PZkXdko-YA4?rel=0" 
@@ -233,6 +302,31 @@
 
                 </div>
             </main>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <!-- Toolbar -->
+            <div class="lightbox-toolbar">
+                <span class="caption" id="lightboxCaption">이미지 뷰어</span>
+                <div class="toolbar-right">
+                    <button class="tool-btn" id="zoomInBtn" title="확대"><i
+                            class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="tool-btn" id="zoomOutBtn" title="축소"><i
+                            class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="tool-btn" id="zoomResetBtn" title="초기화"><i class="fa-solid fa-compress"></i></button>
+                    <button class="close-btn" id="lightboxCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <!-- Image Area -->
+            <div class="lightbox-image-container">
+                <button class="nav-btn prev" id="lightboxPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <img src="" alt="확대 이미지" id="lightboxImg">
+                <button class="nav-btn next" id="lightboxNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </div>
     </div>
 

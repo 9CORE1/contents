@@ -1,12 +1,13 @@
 YOUTUBE 영상, 일부 공개 상태
 
-1. Kling 2.0 활용(프롬프트 개선 전)
+6단계 생성형AI 영상 제작 단계의 엔진별 결과물 비교 내용에 순서대로 표시, 각각 엔진명을 꼭 표시
+1. Kling 2.0 활용
 https://youtu.be/PZkXdko-YA4
 
-2. Seedance 2.0 mini 활용(프롬프트 개선 전)
+2. Seedance 2.0 mini 활용
 https://youtube.com/shorts/2mnmhfSB858?feature=share
 
-3. Seedance 2.0 활용(프롬프트 개선 후)
+3. Seedance 2.0 활용
 https://youtube.com/shorts/EDOPMsvdMMo?feature=share
 
 4. Kling 3.0 Motion Control
@@ -18,6 +19,10 @@ https://youtu.be/44f86T3UdJM
 6. Seedance 2.0 활용
 https://youtube.com/shorts/DBJGwULkyl4?feature=share
 
-7. CapCut프로그램을 활용한 편집
-- 기본 편집 : https://youtu.be/wSlyk_kQ__c
-- 자동자막과 스티커 꾸미기 : https://youtu.be/SkmZ67AV0Xc
+7. Gemini에서 영상 제작
+https://youtube.com/shorts/JnvFk4L2vqU?feature=share
+
+
+7단계 CapCut으로 영상 완성의 실전 편집 튜토리얼 내용으로 순서대로 표시
+1. 기본 편집 : https://youtu.be/wSlyk_kQ__c
+2. 자동자막과 스티커 꾸미기 : https://youtu.be/SkmZ67AV0Xc

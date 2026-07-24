@@ -82,8 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 스위퍼 바 클래스 조절 (translateX 처리를 위해)
                 if (targetStep === 2) {
                     contentSwiperBar.classList.add('step-2');
-                } else {
+                    contentSwiperBar.classList.remove('step-3');
+                } else if (targetStep === 3) {
+                    contentSwiperBar.classList.add('step-3');
                     contentSwiperBar.classList.remove('step-2');
+                } else {
+                    contentSwiperBar.classList.remove('step-2', 'step-3');
                 }
 
                 // 버튼 active 클래스 토글
@@ -142,6 +146,81 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // === 5-2. 메일주소 복사 기능 ===
+    const emailBtns = document.querySelectorAll('.copy-email-btn');
+    if (emailBtns.length > 0) {
+        emailBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const emailText = "teacha99@gmail.com";
+                navigator.clipboard.writeText(emailText).then(() => {
+                    // toast 팝업 노출 (없으면 동적으로 생성해서 body에 붙임)
+                    let toast = document.getElementById('copyToast');
+                    if (!toast) {
+                        toast = document.createElement('div');
+                        toast.id = 'copyToast';
+                        toast.className = 'copy-toast';
+                        toast.innerHTML = `<i class="fa-solid fa-circle-check toast-icon"></i> <span>클립보드에 메일주소가 복사되었습니다!</span>`;
+                        document.body.appendChild(toast);
+                    } else {
+                        const span = toast.querySelector('span');
+                        if (span) span.textContent = '클립보드에 메일주소가 복사되었습니다!';
+                    }
+                    
+                    toast.classList.add('show');
+                    clearTimeout(toastTimeout);
+                    toastTimeout = setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 2500);
+
+                    // 버튼 피드백 (아이콘 및 텍스트 변경)
+                    const icon = btn.querySelector('.step-num i');
+                    const itemTitle = btn.querySelector('.item-title');
+                    
+                    const originalIconClass = icon ? icon.className : '';
+                    const originalTitleText = itemTitle ? itemTitle.textContent : '';
+
+                    if (icon) icon.className = 'fa-solid fa-check text-accent-green';
+                    if (itemTitle) {
+                        itemTitle.textContent = '복사 완료!';
+                        itemTitle.classList.add('text-accent-green');
+                    }
+
+                    setTimeout(() => {
+                        if (icon) icon.className = originalIconClass;
+                        if (itemTitle) {
+                            itemTitle.textContent = originalTitleText;
+                            itemTitle.classList.remove('text-accent-green');
+                        }
+                    }, 2000);
+                }).catch(err => {
+                    console.error('메일 복사 실패: ', err);
+                });
+            });
+        });
+    }
+
+    // === 5-1. 프롬프트 더보기 / 접기 토글 기능 ===
+    document.addEventListener('click', (e) => {
+        const toggleBtn = e.target.closest('.toggle-more-btn');
+        if (!toggleBtn) return;
+        
+        const contentBox = toggleBtn.closest('.prompt-split-content');
+        if (!contentBox) return;
+
+        const isExpanded = contentBox.classList.contains('expanded');
+        const span = toggleBtn.querySelector('span');
+        const icon = toggleBtn.querySelector('i');
+
+        if (isExpanded) {
+            contentBox.classList.remove('expanded');
+            if (span) span.textContent = '더보기';
+            if (icon) icon.className = 'fa-solid fa-chevron-down';
+        } else {
+            contentBox.classList.add('expanded');
+            if (span) span.textContent = '접기';
+            if (icon) icon.className = 'fa-solid fa-chevron-up';
+        }
+    });
     // === 6. 비디오 플레이어 선택 기능 (6단계 전용) ===
     const videoSelectItems = document.querySelectorAll('.video-select-item');
     const mainVideoPlayer = document.getElementById('mainVideoPlayer');
@@ -157,7 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'EDOPMsvdMMo': '프롬프트를 정교하게 수정하고 세부 속성을 묘사한 뒤 Seedance 2.0으로 렌더링한 숏폼 영상입니다. 캐릭터 움직임과 의상의 일관성이 대폭 개선되었습니다.',
             '2U8-ympkdo0': 'Kling 3.0의 Motion Control 기능을 활용해 고화질로 생성한 숏폼 예시입니다. 카메라 모션과 캐릭터 동선이 매우 매끄럽게 제어되는 결과를 확인하세요.',
             '44f86T3UdJM': 'Google Omni Flash 엔진을 적용하여 생성된 일반형 가로 비율 영상입니다. 구도의 안정성과 프레임의 일관성이 높게 유지됩니다.',
-            'DBJGwULkyl4': 'Seedance 2.0 버전을 실전 마케팅 연출에 응용한 영상입니다. 조명 연출 및 배경 디테일의 풍부함을 비교해볼 수 있습니다.'
+            'DBJGwULkyl4': 'Seedance 2.0 버전을 실전 마케팅 연출에 응용한 영상입니다. 조명 연출 및 배경 디테일의 풍부함을 비교해볼 수 있습니다.',
+            'JnvFk4L2vqU': 'Gemini를 활용하여 제작한 숏폼 영상 결과물입니다.'
         };
 
         videoSelectItems.forEach(item => {
@@ -172,14 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 videoSelectItems.forEach(vi => vi.classList.remove('active'));
                 item.classList.add('active');
 
-                // 숏폼 비디오(Shorts)의 경우 전용 비율(9:16) 클래스 적용
-                if (videoPlayerWrapper) {
-                    if (videoType === 'shorts') {
-                        videoPlayerWrapper.classList.add('shorts-player');
-                    } else {
-                        videoPlayerWrapper.classList.remove('shorts-player');
-                    }
-                }
+
 
                 // 유튜브 임베드 주소 교체 및 세부 묘사 텍스트 변경
                 mainVideoPlayer.src = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`;
@@ -360,6 +433,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 isDragging = false;
                 lightboxImg.style.transition = 'transform 0.2s cubic-bezier(0.1, 0.8, 0.3, 1)';
             }
+        });
+
+        // === 5. 즐겨찾기 드롭다운 이동 처리 ===
+        const favSelects = document.querySelectorAll('.fav-select');
+        favSelects.forEach(select => {
+            select.addEventListener('change', (e) => {
+                const url = e.target.value;
+                if (url) {
+                    window.open(url, '_blank');
+                    select.value = ""; // 선택 후 초기화하여 placeholder 상태로 복귀
+                }
+            });
         });
     }
 });

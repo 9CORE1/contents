@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>생성형AI 이미지 제작 - AI 영상 마케팅 실무</title>
-    
+
     <!-- Google Fonts & Font Awesome -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="dark-theme">
     <!-- Background Glow Elements -->
     <div class="bg-glow bg-glow-1"></div>
@@ -123,6 +126,14 @@
                                 <input type="checkbox" class="step-check" data-step="7">
                             </a>
                         </li>
+                        <li>
+                            <div class="nav-item copy-email-btn" style="cursor: pointer;">
+                                <span class="step-num"><i class="fa-regular fa-envelope"></i></span>
+                                <div class="item-details">
+                                    <span class="item-title">메일주소 복사하기</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -130,75 +141,340 @@
             <!-- Main Content Panels -->
             <main class="app-main">
                 <!-- Content Swiper Tab Bar -->
-                <div class="content-swiper-bar mb-6">
-                    <button class="swiper-btn active" data-target-step="1">
-                        <i class="fa-solid fa-copy swiper-icon"></i>
-                        <span>실습 프롬프트 복사</span>
-                    </button>
-                    <button class="swiper-btn" data-target-step="2">
-                        <i class="fa-solid fa-images swiper-icon"></i>
-                        <span>캐릭터 에셋 갤러리</span>
-                    </button>
-                    <div class="swiper-active-bg"></div>
+                <div class="content-swiper-wrapper">
+                    <div class="content-swiper-bar has-3-tabs">
+                        <button class="swiper-btn active" data-target-step="1">
+                            <i class="fa-solid fa-wand-magic-sparkles swiper-icon"></i>
+                            <span>생성형 AI 이미지 툴의 이해</span>
+                        </button>
+                        <button class="swiper-btn" data-target-step="2">
+                            <i class="fa-brands fa-google swiper-icon"></i>
+                            <span>Gemini를 활용한 이미지 생성</span>
+                        </button>
+                        <button class="swiper-btn" data-target-step="3">
+                            <i class="fa-solid fa-robot swiper-icon"></i>
+                            <span>chatGPT를 활용한 이미지 생성</span>
+                        </button>
+                        <div class="swiper-active-bg"></div>
+                    </div>
+                    <div class="fav-dropdown-container">
+                        <select class="fav-select">
+                            <option value="" disabled selected>⭐ 즐겨찾기</option>
+                            <option value="https://9core1.github.io/promptmaker/">promptmaker</option>
+                            <option value="https://9core1.github.io/promptories/">promptories</option>
+                            <option value="https://higgsfield.ai/">higgsfield</option>
+                            <option value="https://vrew.ai/ko/">Vrew</option>
+                            <option value="https://firefly.adobe.com/">Adobe Firefly</option>
+                            <option value="https://www.capcut.com/ko-kr/">CapCut</option>
+                            <option value="https://pixabay.com/">pixabay</option>
+                            <option value="https://www.pinterest.com/">Pinterest</option>
+                            <option value="https://chatgpt.com/">chatGPT</option>
+                            <option value="https://gemini.google.com/">Gemini</option>
+                            <option value="https://claude.ai/">Claude</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="sub-step-slider-container">
-                    
-                    <!-- Sub Step 1: 프롬프트 복사 구역 -->
+
+                    <!-- Sub Step 1: 생성형 AI 이미지 툴의 이해 -->
                     <div class="sub-step active" id="sub-step-1">
                         <div class="panel-header">
-                            <h2>5. 생성형AI를 활용한 이미지 제작</h2>
-                            <p class="panel-desc">ChatGPT, Gemini 및 Midjourney를 통해 영상 마케팅용 메인 캐릭터 및 컷 이미지를 만드는 실습 프롬프트입니다.</p>
+                            <h2>5. 생성형 AI를 활용한 이미지 제작</h2>
+                            <p class="panel-desc">ChatGPT, Gemini 및 Midjourney를 통한 영상 마케팅용 프롬프트 생성 툴 바로가기 및 구조 예시
+                                가이드입니다.</p>
                         </div>
-                        
-                        <!-- Promptmaker Link Card -->
+
+                        <!-- Promptmaker & Promptories Link Card -->
                         <div class="content-card glass mb-6">
-                            <h3><i class="fa-solid fa-wand-magic-sparkles text-accent-purple card-icon"></i> 전용 프롬프트 생성 툴 바로가기</h3>
+                            <h3><i class="fa-solid fa-wand-magic-sparkles text-accent-purple card-icon"></i> 전용 프롬프트 생성
+                                툴 바로가기</h3>
                             <div class="card-body">
-                                <p class="mb-4">강사님이 제공한 전용 Promptmaker 웹도구를 통해 클릭 몇 번만으로 고품질 캐릭터 이미지 생성을 위한 완성형 프롬프트를 조립할 수 있습니다.</p>
-                                <a href="../promptmaker/index.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                                    <i class="fa-solid fa-up-right-from-square"></i> Promptmaker 툴 실행하기
-                                </a>
+                                <p class="mb-4">강사님이 제공한 전용 Promptmaker 및 Promptories 웹도구를 통해 클릭 몇 번만으로 고품질 이미지 생성을 위한
+                                    완성형 프롬프트를 조립할 수 있습니다.</p>
+                                <div class="btn-group">
+                                    <a href="../promptmaker/index.html" target="_blank" rel="noopener noreferrer"
+                                        class="btn btn-outline">
+                                        <i class="fa-solid fa-up-right-from-square"></i> Promptmaker 툴 실행하기
+                                    </a>
+                                    <a href="https://9core1.github.io/promptories/" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-outline">
+                                        <i class="fa-solid fa-up-right-from-square"></i> Promptories 툴 실행하기
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Prompt Copier List -->
-                        <div class="grid-layout cols-1">
-                            <div class="content-card glass">
-                                <h3><i class="fa-solid fa-code text-accent-blue card-icon"></i> 실습용 이미지 프롬프트 복사기</h3>
-                                <div class="card-body">
-                                    
-                                    <!-- Prompt Item 1 -->
-                                    <div class="prompt-box">
-                                        <div class="prompt-header">
-                                            <span class="prompt-title">캐릭터 일관성 시트 프롬프트</span>
-                                            <button class="copy-btn btn btn-outline btn-xs" data-target="promptText1">
-                                                <i class="fa-regular fa-copy"></i> 복사하기
-                                            </button>
+                        <!-- Image Prompt Factors Section -->
+                        <div class="content-card glass">
+                            <h3><i class="fa-solid fa-layer-group text-accent-blue card-icon"></i> 이미지 프롬프트의 요소와 확장하기
+                            </h3>
+                            <div class="card-body">
+                                <p class="mb-4">프롬프트 구성 요소(주제, 스타일, 조명, 구도, 카메라 설정)의 확장 개념과 예시 가이드입니다. 이미지를 클릭하여 크게 확인할
+                                    수 있습니다.</p>
+                                <div class="image-gallery-grid"
+                                    style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                                    <div class="gallery-item" data-src="result/nanobanana01.png"
+                                        data-title="이미지 프롬프트 구성 요소 가이드 1"
+                                        style="aspect-ratio: auto; height: auto;">
+                                        <img src="result/nanobanana01.png" alt="프롬프트 구성 요소 1"
+                                            style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                                        <div class="img-overlay">
+                                            <span>nanobanana01.png (클릭하여 크게 보기)</span>
                                         </div>
-                                        <pre class="prompt-code" id="promptText1">Multiple angles character sheet of a South Korean female marketer in her late 20s, wearing business casual, smart and friendly expression, front view, profile view, 3/4 view, high-quality, professional photography, isolated on solid light gray background --ar 16:9</pre>
+                                    </div>
+                                    <div class="gallery-item" data-src="result/nanobanana02.png"
+                                        data-title="이미지 프롬프트 구성 요소 가이드 2"
+                                        style="aspect-ratio: auto; height: auto;">
+                                        <img src="result/nanobanana02.png" alt="프롬프트 구성 요소 2"
+                                            style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                                        <div class="img-overlay">
+                                            <span>nanobanana02.png (클릭하여 크게 보기)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub Step 2: Gemini 활용 이미지 생성 실습 -->
+                    <div class="sub-step" id="sub-step-2">
+                        <div class="panel-header">
+                            <h2>5. 생성형 AI를 활용한 이미지 제작</h2>
+                            <p class="panel-desc">Google Gemini를 통한 기본 이미지 생성 기법 및 일관성 있는 스타일 유지 프롬프트 실습입니다.</p>
+                        </div>
+
+                        <!-- Box 1: Gemini 이미지 기본 사용법 -->
+                        <div class="content-card glass mb-6">
+                            <h3><i class="fa-brands fa-google text-accent-blue card-icon"></i> Gemini 이미지 기본 사용법</h3>
+                            <div class="card-body">
+                                <div class="prompt-split-list">
+
+                                    <!-- Item 1 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini-image01.png"
+                                            data-title="Gemini 기본 사용법 01 - 비주얼 스케치">
+                                            <img src="result/gemini-image01.png" alt="Gemini 예시 1">
+                                            <div class="img-overlay"><span>gemini-image01.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 기본 렌더링 01 - 인물 스케치 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="geminiPrompt1">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="geminiPrompt1">밝은 색을 배경으로 하는 스튜디오에서 프로필 사진을 촬영하고 있는 40대 전문직 여성을 이미지로 생성해주세요.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
                                     </div>
 
-                                    <!-- Prompt Item 2 -->
-                                    <div class="prompt-box mt-4">
-                                        <div class="prompt-header">
-                                            <span class="prompt-title">특정 업무 수행 액션 프롬프트</span>
-                                            <button class="copy-btn btn btn-outline btn-xs" data-target="promptText2">
-                                                <i class="fa-regular fa-copy"></i> 복사하기
-                                            </button>
+                                    <!-- Item 2 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini-image02.png"
+                                            data-title="Gemini 기본 사용법 02 - 분위기 연출">
+                                            <img src="result/gemini-image02.png" alt="Gemini 예시 2">
+                                            <div class="img-overlay"><span>gemini-image02.png</span></div>
                                         </div>
-                                        <pre class="prompt-code" id="promptText2">A South Korean female marketer in her late 20s, smart and friendly expression, working on a sleek laptop in a modern bright creative office, warm natural sunlight through big windows, cinematic lighting, photorealistic, 8k --ar 16:9</pre>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 기본 렌더링 02 - 비율 조절 및 전신샷 요청</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="geminiPrompt2">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="geminiPrompt2">2번째 생성해준 이미지를 pic02로 기억해줘.pic02를 전신샷, 9:16비율로 수정해서 다시 생성해줘.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
                                     </div>
 
-                                    <!-- Prompt Item 3 -->
-                                    <div class="prompt-box mt-4">
-                                        <div class="prompt-header">
-                                            <span class="prompt-title">제품 시연 광고 연출 프롬프트</span>
-                                            <button class="copy-btn btn btn-outline btn-xs" data-target="promptText3">
-                                                <i class="fa-regular fa-copy"></i> 복사하기
-                                            </button>
+                                    <!-- Item 3 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini-image03.png"
+                                            data-title="Gemini 기본 사용법 03 - 포스터 연출">
+                                            <img src="result/gemini-image03.png" alt="Gemini 예시 3">
+                                            <div class="img-overlay"><span>gemini-image03.png</span></div>
                                         </div>
-                                        <pre class="prompt-code" id="promptText3">A South Korean female marketer in her late 20s, holding a new tech product smiling happily, showcasing the product to the camera, bright neon office background, advertising photography, shot on 85mm lens, high fidelity --ar 16:9</pre>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 기본 렌더링 03 - 배경만 수정 요청</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="geminiPrompt3">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="geminiPrompt3">생성해준 이미지를 pic03으로 기억해줘. pic03의 피사체는 그대로 두고, 배경을 고흐의 '밤의 카페 테라스'로 수정해서 다시 생성해줘.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 4 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini-image04.png"
+                                            data-title="Gemini 기본 사용법 04 - 앵글 및 시선">
+                                            <img src="result/gemini-image04.png" alt="Gemini 예시 4">
+                                            <div class="img-overlay"><span>gemini-image04.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 기본 렌더링 04 - 카메라 앵글 종류별 이미지 생성</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="geminiPrompt4">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="geminiPrompt4">기억하고 있는 pic03 이미지를 다시 확인해줘. 고마워. 카메라 앵글의 대표적인 종류 9개를 정리해줘.<br>고마워. pic03이미지의 피사체 얼굴을 중심으로 정리해준 9개 앵글 이미지를 3*3 으로 생성해줘. 1:1, 일러스트 스타일로 생성해줘.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Box 2: 일관성 있는 이미지 생성법 -->
+                        <div class="content-card glass">
+                            <h3><i class="fa-solid fa-arrows-to-eye text-accent-purple card-icon"></i> 일관성 있는 이미지 생성법
+                            </h3>
+                            <div class="card-body">
+                                <div class="prompt-split-list">
+
+                                    <!-- Item 1 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini2-image01.png"
+                                            data-title="Gemini 일관성 01 - 시트 시드 설정">
+                                            <img src="result/gemini2-image01.png" alt="Gemini 일관성 1">
+                                            <div class="img-overlay"><span>gemini2-image01.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 일관성 01 - motion01 포즈 적용</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="gemini2Prompt1">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="gemini2Prompt1">생성해준(업로드한) 전신샷 이미지를 pic01로 기억해줘. pic01을 motion01 동작처럼 이미지를 생성해주세요.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 2 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini2-image02.png"
+                                            data-title="Gemini 일관성 02 - 동작 변형">
+                                            <img src="result/gemini2-image02.png" alt="Gemini 일관성 2">
+                                            <div class="img-overlay"><span>gemini2-image02.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 일관성 02 - motion 02 포즈 적용</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="gemini2Prompt2">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="gemini2Prompt2">pic01을 motion02 동작처럼 이미지를 생성해주세요.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 3 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini2-image03.png"
+                                            data-title="Gemini 일관성 03 - 클로즈업 표정">
+                                            <img src="result/gemini2-image03.png" alt="Gemini 일관성 3">
+                                            <div class="img-overlay"><span>gemini2-image03.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 일관성 03 - motion 03 포즈 적용</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="gemini2Prompt3">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="gemini2Prompt3">pic01을 motion03 동작처럼 이미지를 생성해주세요.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 4 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini2-image04.png"
+                                            data-title="Gemini 일관성 04 - 배경 및 무드">
+                                            <img src="result/gemini2-image04.png" alt="Gemini 일관성 4">
+                                            <div class="img-overlay"><span>gemini2-image04.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 일관성 04 - 정면 포즈로 수정</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="gemini2Prompt4">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="gemini2Prompt4">정면으로 팔짱을 끼는 포즈로 다시 생성해주세요.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 5 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/gemini2-image05.png"
+                                            data-title="Gemini 일관성 05 - 키 비주얼 연출">
+                                            <img src="result/gemini2-image05.png" alt="Gemini 일관성 5">
+                                            <div class="img-overlay"><span>gemini2-image05.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">Gemini 일관성 05 - motion 04 포즈 적용</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="gemini2Prompt5">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="gemini2Prompt5">너는 pic01이미지를 잘 기억하고 있어?<br>그렇게 생성해줘.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -206,77 +482,251 @@
                         </div>
                     </div>
 
-                    <!-- Sub Step 2: 캐릭터 이미지 갤러리 -->
-                    <div class="sub-step" id="sub-step-2">
+
+                    <!-- Sub Step 3: chatGPT 활용 이미지 생성 실습 -->
+                    <div class="sub-step" id="sub-step-3">
                         <div class="panel-header">
-                            <h2>5. 생성형AI를 활용한 이미지 제작</h2>
-                            <p class="panel-desc">Promptmaker 툴을 통해 AI로 정교하게 제작 완료된 실습용 캐릭터 에셋들을 확인하고 클릭하여 다운로드합니다.</p>
+                            <h2>5. 생성형 AI를 활용한 이미지 제작</h2>
+                            <p class="panel-desc">chatGPT(DALL-E 3) 기반 마케팅 캐릭터 시트 제작 및 응용 이미지 생성 실습입니다.</p>
                         </div>
-                        <div class="content-card glass">
-                            <h3><i class="fa-solid fa-image text-accent-blue card-icon"></i> 캐릭터 모델 및 스토리보드 소스 리스트</h3>
+
+                        <!-- Box 1: chatGPT를 활용한 캐릭터시트 제작 -->
+                        <div class="content-card glass mb-6">
+                            <h3><i class="fa-solid fa-robot text-accent-green card-icon"></i> chatGPT를 활용한 캐릭터시트 제작</h3>
                             <div class="card-body">
-                                <div class="image-gallery-grid">
-                                    <div class="gallery-item" data-src="result/CS_model_face.png" data-title="캐릭터 메인 얼굴 모델링 피드">
-                                        <img src="result/CS_model_face.png" alt="캐릭터 기본 얼굴">
-                                        <div class="img-overlay">
-                                            <span>CS_model_face.png</span>
+                                <div class="prompt-split-list">
+
+                                    <!-- Item 1 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item"
+                                            data-src="result/CS_model_Bustshot.png"
+                                            data-title="chatGPT 캐릭터시트 01 - 바스트 샷 모델링">
+                                            <img src="result/CS_model_Bustshot.png" alt="ChatGPT 캐릭터시트 1">
+                                            <div class="img-overlay"><span>CS_model_Bustshot.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">chatGPT 캐릭터시트 01 - 바스트 샷 모델링 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs" data-target="csPrompt1">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csPrompt1">Using the provided image as the identity reference, recreate the same person as a high-quality bust portrait. Preserve the character's facial identity, facial proportions, skin texture, hairstyle, hair length, hair color, body proportions, age impression, and overall appearance exactly as shown in the reference image. Reframe the composition into a Bust Shot: Crop from just below the chest to slightly above the head. Keep the subject centered. Straight-on front-facing view. Neutral expression. Symmetrical posture. Do not change pose, expression, body shape, or camera angle. Enhance image quality: Increase facial clarity and micro-details. Sharpen eyelashes, eyebrows, irises, lips, and skin texture naturally. Improve hair strand definition. Remove blur and AI smoothing artifacts. Face details should appear crisp while preserving identity. Camera: 85mm portrait lens Eye-level camera Soft diffused studio lighting Background: Pure white seamless studio background. Output: 2:3 aspect ratio High-resolution 8K render quality Premium studio portrait aesthetic</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
                                         </div>
                                     </div>
-                                    <div class="gallery-item" data-src="result/CS_apply01.png" data-title="실습용 캐릭터 포즈 1 - 대기">
-                                        <img src="result/CS_apply01.png" alt="대기 포즈">
-                                        <div class="img-overlay">
-                                            <span>CS_apply01.png</span>
+
+                                    <!-- Item 2 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item"
+                                            data-src="result/CS_face_turnaround.png"
+                                            data-title="chatGPT 캐릭터시트 02 - 얼굴 턴어라운드">
+                                            <img src="result/CS_face_turnaround.png" alt="ChatGPT 캐릭터시트 2">
+                                            <div class="img-overlay"><span>CS_face_turnaround.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">chatGPT 캐릭터시트 02 - 얼굴 턴어라운드 시트 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs" data-target="csPrompt2">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csPrompt2">Use the uploaded photo as the identity reference only. Generate a professional 4 face turnaround sheet on a seamless white background with Front, 3/4 Left, Left portrait, Rear. Keep identical facial identity, hairstyle, skin texture, and proportions in every image. Upper chest crop, 85mm portrait, soft studio lighting, photorealistic, ultra realistic, 8K.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
                                         </div>
                                     </div>
-                                    <div class="gallery-item" data-src="result/CS_apply02.png" data-title="실습용 캐릭터 포즈 2 - 지목">
-                                        <img src="result/CS_apply02.png" alt="지목 포즈">
-                                        <div class="img-overlay">
-                                            <span>CS_apply02.png</span>
+
+                                    <!-- Item 3 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/CS_model_face.png"
+                                            data-title="chatGPT 캐릭터시트 03 - 메인 페이스 피드">
+                                            <img src="result/CS_model_face.png" alt="ChatGPT 캐릭터시트 3">
+                                            <div class="img-overlay"><span>CS_model_face.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">chatGPT 캐릭터시트 03 - 페이스 디테일 모델링 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs" data-target="csPrompt3">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csPrompt3">Use the uploaded image as the identity reference only. Reconstruct the person into a standardized head-and-shoulders studio portrait regardless of the input framing. Crop from just below the collarbones to slightly above the head, with the head filling about 70–75% of the frame. Never generate a full-body, half-body, waist-up, upper-body, or bust shot.<br><br>Create one professional facial expression sheet with exactly eight portraits arranged in a clean 4×2 grid on a pure white seamless background. Keep the same person perfectly consistent in every portrait, preserving identical facial identity, hairstyle, bangs, hair length, skin tone, facial proportions, neck, and clothing visible at the neckline. Keep identical framing, camera distance, lighting, color grading, and use a straight-on front view (0°). Only the facial expression may change. Expressions in order: Neutral, Soft Smile, Big Smile (teeth visible), Laughing, Surprised, Angry, Sad, Winking. Photorealistic studio portrait, 85mm lens, soft diffused lighting, ultra realistic, 8K. Negative prompt: full body, half body, waist up, bust shot, zoomed out, different framing, different person, altered face, different hairstyle, side view, profile, head rotation, inconsistent lighting, beauty filter, illustration, anime, CGI, blurry, text, watermark.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
                                         </div>
                                     </div>
-                                    <div class="gallery-item" data-src="result/CS_apply03.png" data-title="실습용 캐릭터 포즈 3 - 놀람">
-                                        <img src="result/CS_apply03.png" alt="놀람 포즈">
-                                        <div class="img-overlay">
-                                            <span>CS_apply03.png</span>
+
+                                    <!-- Item 4 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item"
+                                            data-src="result/CS_body_turnaround.png"
+                                            data-title="chatGPT 캐릭터시트 04 - 전신 턴어라운드">
+                                            <img src="result/CS_body_turnaround.png" alt="ChatGPT 캐릭터시트 4">
+                                            <div class="img-overlay"><span>CS_body_turnaround.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">chatGPT 캐릭터시트 04 - 전신 턴어라운드 모델링 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs" data-target="csPrompt4">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csPrompt4">Use the full-body image as the base reference and the bust portrait as the identity reference. Generate a full-body turnaround sheet with exactly four views in this order: Front (0°), Front 3/4 Left (45°), Left Profile (90°), Back (180°). Preserve the face from the first image and the outfit, body, and hair from the second image exactly. No extra views or duplicated angles. White background. Photorealistic. 8K.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
                                         </div>
                                     </div>
-                                    <div class="gallery-item" data-src="result/CS_apply04.png" data-title="실습용 캐릭터 포즈 4 - 자신감">
-                                        <img src="result/CS_apply04.png" alt="자신감 포즈">
-                                        <div class="img-overlay">
-                                            <span>CS_apply04.png</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Box 2: 캐릭터시트를 활용한 이미지 제작 -->
+                        <div class="content-card glass mb-6">
+                            <h3><i class="fa-solid fa-wand-magic text-accent-gold card-icon"></i> 캐릭터시트를 활용한 이미지 제작</h3>
+                            <div class="card-body">
+                                <div class="prompt-split-list">
+
+                                    <!-- Item 1 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/CS_apply01.png"
+                                            data-title="캐릭터시트 응용 01 - 데스크 작업 대기">
+                                            <img src="result/CS_apply01.png" alt="캐릭터시트 응용 1">
+                                            <div class="img-overlay"><span>CS_apply01.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">캐릭터시트 응용 01 - 노트북 속의 나 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="csApplyPrompt1">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csApplyPrompt1">Preserve the exact same face, hairstyle, body proportions, skin tone, clothing, colors, fabrics, accessories, and styling. Use the reference image only for the pose, framing, camera perspective, and editorial mood.<br><br>Photograph with an ultra wide-angle 18–20mm lens from slightly above eye level, angled gently downward. Keep the camera close so the head, face, shoulders, and laptop appear naturally larger from perspective. Do not use a low-angle viewpoint.<br><br>Frame as a tight upper-thigh shot. Crop through the upper thighs so the knees, lower legs, ankles, and feet remain completely outside the frame. Do not generate a full-body or three-quarter portrait. The subject fills approximately 85% of the frame with minimal headroom.<br><br>The model stands in a relaxed contrapposto pose with weight on one leg and the upper body leaning slightly toward the camera. Keep the head almost upright with a subtle tilt, the chin gently raised, and maintain calm, direct eye contact. The model holds an open laptop naturally with one hand from underneath at upper-abdomen to lower-chest height while the other arm hangs naturally. The laptop screen faces directly toward the camera and displays an extreme close-up of the same uploaded model's face, filling almost the entire display. Leave negative space on the right so the charging cable extends naturally toward the edge.<br><br>Create the scene inside a seamless cool blue-gray cyclorama studio, not a pure white studio. The wall and floor blend into one continuous surface with a soft blue-gray tint, creating a luxurious minimal editorial atmosphere. Use large diffused studio lighting with almost shadowless illumination, cool white balance, smooth highlight roll-off, low contrast, subtle analog grain, slightly desaturated colors, soft cool skin tones, and gentle blue-gray ambient reflections. High-end early-2000s luxury fashion editorial aesthetic. Color palette: #F4F7FA, #E6ECF2, #D6DEE8, #BCC8D5, #7F8D9C. Vertical 2:3 aspect ratio, no props, text, logos, or watermark, ultra-photorealistic.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
                                         </div>
                                     </div>
-                                    <div class="gallery-item" data-src="result/character_prompt.txt" data-title="캐릭터 일관성 텍스트 파일">
-                                        <div class="txt-file-fallback">
-                                            <i class="fa-solid fa-file-lines txt-icon"></i>
-                                            <span>character_prompt.txt</span>
+
+                                    <!-- Item 2 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/CS_apply02.png"
+                                            data-title="캐릭터시트 응용 02 - 지목 액션 컷">
+                                            <img src="result/CS_apply02.png" alt="캐릭터시트 응용 2">
+                                            <div class="img-overlay"><span>CS_apply02.png</span></div>
                                         </div>
-                                        <div class="img-overlay">
-                                            <span>텍스트 파일 열기</span>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-item" data-src="result/cs_model_result.png" data-title="캐릭터 생성 최종 렌더 결과물">
-                                        <img src="result/cs_model_result.png" alt="결과물 1">
-                                        <div class="img-overlay">
-                                            <span>cs_model_result.png</span>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-item" data-src="result/cs_model_result2.png" data-title="캐릭터 생성 최종 렌더 결과물 2">
-                                        <img src="result/cs_model_result2.png" alt="결과물 2">
-                                        <div class="img-overlay">
-                                            <span>cs_model_result2.png</span>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-item" data-src="result/cs_model_result3.png" data-title="캐릭터 생성 최종 렌더 결과물 3">
-                                        <img src="result/cs_model_result3.png" alt="결과물 3">
-                                        <div class="img-overlay">
-                                            <span>cs_model_result3.png</span>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">캐릭터시트 응용 02 - 미니미와 함께 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="csApplyPrompt2">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csApplyPrompt2">Preserve the exact same face, hairstyle, body proportions, outfit and accessories. Use the reference image only for the composition and pose. Create a surreal giant-object editorial photograph. A giant version of the model fills the left side of the frame, with only the back, hips and lower body extending beyond the frame while the entire face remains fully visible. The giant is in a very deep squat, both feet flat on the floor, knees deeply bent, torso leaning forward, both hands resting naturally on the knees, looking directly at the miniature. The miniature model is 15–20% of the image height, positioned in the lower-right corner, jumping on one leg with the opposite knee raised, smiling and waving while making direct eye contact. Both figures exist in the same physical studio, photographed in a single exposure with identical perspective, lighting, shadows and floor contact, creating a completely natural scale illusion rather than a composite. Soft seamless studio background with a cool bluish-gray gradient, low-contrast editorial lighting, subtle falloff, gentle shadows, muted tones, Kodak Portra 400 color palette shifted cooler (#E8EDF2, #D8E0E6, #B8C2CC, #6B7480), fine analog film grain, soft highlight roll-off, cinematic fashion photography, 2:3 aspect ratio, ultra photorealistic. Negative: composite look, mismatched shadows, inconsistent perspective, pasted subject, cropped face, CGI, illustration, anime, text, watermark.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
                                         </div>
                                     </div>
-                                    <div class="gallery-item" data-src="result/cs_model_result4.png" data-title="캐릭터 생성 최종 렌더 결과물 4">
-                                        <img src="result/cs_model_result4.png" alt="결과물 4">
-                                        <div class="img-overlay">
-                                            <span>cs_model_result4.png</span>
+
+                                    <!-- Item 3 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/CS_apply03.png"
+                                            data-title="캐릭터시트 응용 03 - 놀람 반응 컷">
+                                            <img src="result/CS_apply03.png" alt="캐릭터시트 응용 3">
+                                            <div class="img-overlay"><span>CS_apply03.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">캐릭터시트 응용 03 - MZ샷 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="csApplyPrompt3">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csApplyPrompt3">Top-down hero angle full-body fashion editorial. The camera is positioned approximately 2 meters directly above the model's head, pitched straight downward about 75–85 degrees, and placed slightly in front of the model's centerline rather than directly overhead. The entire body is fully visible from head to toe with both feet completely inside the frame and generous space around the body. The model stands perfectly centered in the composition. Ultra wide-angle perspective (20–24mm lens equivalent) with strong but natural perspective distortion: the face appears noticeably larger due to the camera angle while the legs appear dramatically longer. The body forms a subtle S-curve with one hip pushed outward and the weight resting naturally on one leg. Both hands are naturally clasped behind the back or resting behind the waist. The chin is slightly lowered while maintaining direct eye contact with the camera. The head is closest to the camera and the feet are farthest away, creating a powerful top-down perspective. Soft cool blue-gray seamless studio background with a subtle center-to-edge gradient (#DCE6F2 → #B8C7D9). Soft diffused studio lighting with a cool daylight white balance (6000–6500K), gentle wraparound illumination, smooth tonal transitions, very soft natural shadows, low-contrast editorial color grading, slightly muted saturation, cool neutral whites, clean natural skin tones, deep charcoal blacks, and a refined cinematic studio look. Premium luxury fashion campaign editorial, bold composition, dramatic perspective, elegant posture, high-end magazine photography, crisp details, photorealistic.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 4 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/CS_apply04.png"
+                                            data-title="캐릭터시트 응용 04 - 자신감 제스처 컷">
+                                            <img src="result/CS_apply04.png" alt="캐릭터시트 응용 4">
+                                            <div class="img-overlay"><span>CS_apply04.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">캐릭터시트 응용 04 - TV속의 나 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="csApplyPrompt4">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csApplyPrompt4">Preserve the model 100%, including facial identity, facial proportions, hairstyle, skin tone, body proportions, expression, and all distinctive features. Keep the exact same outfit, colors, fabric texture, shoes, and accessories from the uploaded photo. Never redesign, recolor, or replace any clothing. Ignore only the original background, lighting, composition, pose, and camera angle. Use the reference image only for the pose, composition, props, and studio layout.<br><br>Create a seamless white studio with three vintage CRT televisions. One large CRT television is placed prominently in the foreground with its screen facing the camera. Two additional CRT televisions are positioned behind the model on opposite sides, angled toward the camera. Every television screen must be turned on and clearly display close-up portraits of the exact same model from different angles. The TV screens are mandatory and must never be blank, turned off, show static, reflections, graphics, or unrelated imagery. The model kneels on both knees beside the front television, resting both forearms stacked flat across the top with the head gently resting on the arms while looking directly into the camera. Keep this pose exactly. Shoot from a slightly left-front diagonal angle using an off-center editorial composition. Place the front TV in the foreground and the model slightly behind it so the head and shoulders appear closer to the camera, creating strong foreground-background depth. Avoid perfectly centered, symmetrical, or catalog-style framing. 2:3 vertical, 28–35mm lens, eye-level, soft diffused studio lighting, authentic film grain, low contrast, warm ivory highlights, creamy whites, muted blacks, soft peach skin tones, nostalgic color grading. Color palette: #F6F1EA, #F8F6F2, #E8C9C8, #E8B8A8, #D8C7B6, #4A4643. Ultra-photorealistic, premium editorial fashion photography, crisp facial details, natural skin texture, authentic film look.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Box 3: 이미지 요소 추출하기 -->
+                        <div class="content-card glass">
+                            <h3><i class="fa-solid fa-crop-simple text-accent-blue card-icon"></i> 이미지 요소 추출하기</h3>
+                            <div class="card-body">
+                                <div class="prompt-split-list">
+
+                                    <!-- Item 1 -->
+                                    <div class="prompt-split-item">
+                                        <div class="prompt-split-img gallery-item" data-src="result/factor_result.png"
+                                            data-title="이미지 요소 추출하기">
+                                            <img src="result/factor_result.png" alt="이미지 요소 추출하기">
+                                            <div class="img-overlay"><span>factor_result.png</span></div>
+                                        </div>
+                                        <div class="prompt-split-content">
+                                            <div class="prompt-header">
+                                                <span class="prompt-title">이미지 요소 추출 프롬프트</span>
+                                                <button class="copy-btn btn btn-outline btn-xs"
+                                                    data-target="csExtractPrompt">
+                                                    <i class="fa-regular fa-copy"></i> 복사하기
+                                                </button>
+                                            </div>
+                                            <div class="prompt-code-wrapper">
+                                                <pre class="prompt-code"
+                                                    id="csExtractPrompt">Output this image as JSON. Include a field noting that the reference image's identity must be preserved exactly.</pre>
+                                            </div>
+                                            <button class="toggle-more-btn"><span>더보기</span> <i
+                                                    class="fa-solid fa-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -297,8 +747,10 @@
             <div class="lightbox-toolbar">
                 <span class="caption" id="lightboxCaption">이미지 뷰어</span>
                 <div class="toolbar-right">
-                    <button class="tool-btn" id="zoomInBtn" title="확대"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
-                    <button class="tool-btn" id="zoomOutBtn" title="축소"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="tool-btn" id="zoomInBtn" title="확대"><i
+                            class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="tool-btn" id="zoomOutBtn" title="축소"><i
+                            class="fa-solid fa-magnifying-glass-minus"></i></button>
                     <button class="tool-btn" id="zoomResetBtn" title="초기화"><i class="fa-solid fa-compress"></i></button>
                     <button class="close-btn" id="lightboxCloseBtn"><i class="fa-solid fa-xmark"></i></button>
                 </div>
@@ -320,4 +772,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
